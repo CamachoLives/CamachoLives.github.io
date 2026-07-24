@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Cristian Camacho</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
+    <title>Cristian Camacho | Desarrollador Backend & Ciberseguridad - Bogotá</title>
+    <meta
+      name="description"
+      content="Desarrollador Backend (Java Spring Boot, Angular, Node.js) y Analista de Ciberseguridad en Bogotá. Modernización de sistemas, integraciones API, administración de servidores Linux/Nginx y monitoreo SOC. Cotiza tu proyecto."
+    />
+    <meta
+      name="keywords"
+      content="desarrollador backend bogota, freelance java spring boot, ciberseguridad soc colombia, administrador servidores linux nginx, desarrollo de software a medida, consultor ciberseguridad"
+    />
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png"icon">
-    <!-- <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" /> -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -37,6 +43,93 @@
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
+
+    <!-- Custom additions -->
+    <style>
+      .tech-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 14px;
+      }
+      .tech-tag {
+        display: inline-block;
+        padding: 5px 14px;
+        border-radius: 30px;
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--accent-color);
+        background-color: color-mix(in srgb, var(--accent-color), transparent 88%);
+        border: 1px solid color-mix(in srgb, var(--accent-color), transparent 70%);
+      }
+      .portfolio-caption {
+        padding: 18px 4px 0;
+      }
+      .portfolio-caption h4 {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--heading-color);
+        margin-bottom: 6px;
+      }
+      .portfolio-caption p {
+        margin-bottom: 0;
+        color: color-mix(in srgb, var(--default-color), transparent 15%);
+      }
+      .skill-tags-group {
+        margin-bottom: 26px;
+      }
+      .skill-tags-group h4 {
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: var(--accent-color);
+        margin-bottom: 14px;
+      }
+      .cta-banner {
+        text-align: center;
+      }
+      .cta-banner h2 {
+        font-size: 34px;
+        font-weight: 700;
+        color: var(--heading-color);
+        margin-bottom: 12px;
+      }
+      .cta-banner p {
+        max-width: 640px;
+        margin: 0 auto 28px;
+        color: color-mix(in srgb, var(--default-color), transparent 10%);
+      }
+      .cta-banner .cta-buttons {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .cta-banner .cta-buttons .btn {
+        padding: 12px 32px;
+        border-radius: 50px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+      .cta-banner .cta-buttons .btn-primary {
+        background-color: var(--accent-color);
+        color: var(--contrast-color);
+        border: 2px solid var(--accent-color);
+      }
+      .cta-banner .cta-buttons .btn-primary:hover {
+        background-color: transparent;
+        color: var(--accent-color);
+      }
+      .cta-banner .cta-buttons .btn-outline {
+        background-color: transparent;
+        color: var(--default-color);
+        border: 2px solid color-mix(in srgb, var(--default-color), transparent 60%);
+      }
+      .cta-banner .cta-buttons .btn-outline:hover {
+        border-color: var(--accent-color);
+        color: var(--accent-color);
+      }
+    </style>
   </head>
 
   <body class="index-page">
@@ -51,30 +144,35 @@
           <ul>
             <li>
               <a href="#hero" class="active"
-                ><i class="bi bi-house navicon"></i>Home</a
+                ><i class="bi bi-house navicon"></i>Inicio</a
               >
             </li>
             <li>
-              <a href="#about"><i class="bi bi-person navicon"></i> About</a>
+              <a href="#about"><i class="bi bi-person navicon"></i> Sobre mí</a>
+            </li>
+            <li>
+              <a href="#services"
+                ><i class="bi bi-briefcase navicon"></i> Servicios</a
+              >
+            </li>
+            <li>
+              <a href="#portfolio"
+                ><i class="bi bi-images navicon"></i> Proyectos</a
+              >
             </li>
             <li>
               <a href="#resume"
-                ><i class="bi bi-file-earmark-text navicon"></i> Resume</a
+                ><i class="bi bi-file-earmark-text navicon"></i> Experiencia</a
               >
             </li>
-            <!-- <li>
-              <a href="#portfolio"
-                ><i class="bi bi-images navicon"></i> Portfolio</a
-              >
-            </li> -->
             <li>
-              <a href="#services"
-                ><i class="bi bi-hdd-stack navicon"></i>Skills</a
+              <a href="#skills"
+                ><i class="bi bi-hdd-stack navicon"></i> Habilidades</a
               >
             </li>
             <li>
               <a href="#contact"
-                ><i class="bi bi-envelope navicon"></i> Contact</a
+                ><i class="bi bi-envelope navicon"></i> Contacto</a
               >
             </li>
           </ul>
@@ -112,26 +210,33 @@
               <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
                 <div class="hero-text">
                   <h1>Cristian<span class="accent-text">Camacho</span></h1>
-                  <h2>Cybersecurity Analyst & Software Developer</h2>
+                  <h2>Desarrollador Backend & Analista de Ciberseguridad</h2>
                   <p class="lead">
-                    I'm a
+                    Soluciones en
                     <span
                       class="typed"
-                      data-typed-items="Cybersecurity Analyst, SOC/NOC Specialist, SIEM Automation, Malware Remediation Specialist, Software Developer, Backend"
+                      data-typed-items="Desarrollo de Software a Medida, Modernización de Sistemas Legacy, Infraestructura Linux & Nginx, Monitoreo SOC y Respuesta a Incidentes, Integraciones API REST & SOAP, Automatización CI/CD"
                     ></span>
                   </p>
                   <p class="description">
-                    Passionate about enhancing cybersecurity and developing
-                    innovative software solutions that blend advanced threat
-                    analysis with functional, user-focused development. Let's
-                    secure and optimize your digital world.
+                    Ayudo a empresas a construir, asegurar y escalar sus
+                    plataformas digitales. Más de 4 años combinando desarrollo
+                    backend (Java, Spring Boot, Angular, Node.js) con
+                    ciberseguridad SOC, administración de servidores y
+                    despliegues en la nube, para entregar productos estables,
+                    seguros y listos para producción.
                   </p>
 
                   <div class="hero-actions">
-                    <a href="#portfolio" class="btn btn-primary"
-                      >View My Work</a
+                    <a href="#services" class="btn btn-primary"
+                      >Ver Servicios</a
                     >
-                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                    <a
+                      href="https://wa.me/573148917721?text=Hola%20Cristian%2C%20quiero%20cotizar%20un%20proyecto"
+                      class="btn btn-outline"
+                      target="_blank"
+                      >Hablemos por WhatsApp</a
+                    >
                   </div>
 
                   <div class="social-links">
@@ -191,21 +296,21 @@
                 <div class="profile-content">
                   <h3>Cristian Alexander Camacho Pira</h3>
                   <p class="profession">
-                    Cybersecurity Analyst &amp; Software Developer
+                    Desarrollador Backend &amp; Analista de Ciberseguridad
                   </p>
 
                   <div class="contact-links">
-                    <a href="mailto:marcus@example.com" class="contact-item">
+                    <a href="mailto:rfcamacris@gmail.com" class="contact-item">
                       <i class="bi bi-envelope"></i>
                       rfcamacris@gmail.com
                     </a>
-                    <a href="tel:+15551234567" class="contact-item">
+                    <a href="tel:+573148917721" class="contact-item">
                       <i class="bi bi-telephone"></i>
                       +57 314 891 7721
                     </a>
                     <a href="#" class="contact-item">
                       <i class="bi bi-geo-alt"></i>
-                      Bogota D.C, Colombia
+                      Bogotá D.C, Colombia
                     </a>
                   </div>
                 </div>
@@ -215,38 +320,39 @@
             <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
               <div class="about-content">
                 <div class="section-header">
-                  <span class="badge-text">Get to Know Me</span>
-                  <h2>Software Developer & Cybersecurity Analyst</h2>
+                  <span class="badge-text">Conóceme</span>
+                  <h2>Desarrollador Backend & Analista de Ciberseguridad</h2>
                 </div>
 
                 <div class="description">
                   <p>
-                    Professional with over two years of experience in software
-                    development, specialized in IBM Domino / HCL Domino, with a
-                    focus on back-end development and knowledge in front-end
-                    technologies. Experienced in JavaScript, TypeScript,
-                    LotusScript, Visual Basic, Java, DQL, and C++. Proficient in
-                    using AJAX and jQuery to optimize interfaces and implement
-                    interactive functionalities.
+                    Cuento con más de 4 años de experiencia combinada en
+                    desarrollo de software y ciberseguridad, especializado en
+                    entornos corporativos y la protección de infraestructuras
+                    críticas. Diseño e implemento sistemas web empresariales
+                    completos y soluciones transaccionales, modernizando
+                    arquitecturas legacy hacia modelos escalables y operando
+                    bajo estándares de seguridad en entornos PCI y no PCI.
                   </p>
 
                   <p>
-                    I have worked on the development and customization of
-                    modules for document management systems, adapting them to
-                    the needs of various business areas. Additionally, I possess
-                    skills in modern technologies such as Angular, React,
-                    Node.js, Spring Boot, and Flutter, acquired through
-                    self-learning.
+                    Aplico prácticas de codificación segura (JWT, buenas
+                    prácticas de programación y QA previo a producción) con un
+                    stack versátil que incluye Java (Spring Boot) y Angular,
+                    integrado con WebSockets, Fetch API, microservicios,
+                    arquitecturas REST y SOAP (WSDL), Webhooks, AJAX y jQuery.
+                    Administro servidores Linux y Nginx, bases de datos
+                    (Informix, SQL) y automatizo despliegues con CI/CD en
+                    GitLab y scripts Bash, apoyado en entornos cloud como AWS
+                    Lambda para alta disponibilidad.
                   </p>
                   <p>
-                    In the field of cybersecurity, I have performed incident
-                    response and threat analysis tasks in SOC/CERT and NOC
-                    environments, using SIEM tools such as Darktrace, IBM
-                    QRadar, Trellix/McAfee, Azure Sentinel/Microsoft, and
-                    Exabeam. I also have experience in malware remediation for
-                    web applications, as well as in implementing SIEM
-                    automations to optimize detection and response, and in
-                    continuous security event monitoring.
+                    En ciberseguridad, tengo experiencia en SOC utilizando
+                    SIEMs y EDR como Darktrace, QRadar, McAfee, Exabeam y Azure
+                    Sentinel para monitoreo, correlación de eventos y
+                    mitigación de incidentes cumpliendo los SLA establecidos,
+                    con conocimiento en gestión de vulnerabilidades (CVE) y
+                    respuesta ante incidentes. Inglés B1 certificado.
                   </p>
                 </div>
 
@@ -255,25 +361,25 @@
                     <span class="stat-number">
                       <span
                         data-purecounter-start="0"
-                        data-purecounter-end="10"
+                        data-purecounter-end="4"
                         data-purecounter-duration="2"
                         class="purecounter"
                       ></span
                       >+
                     </span>
-                    <div class="stat-label">Programming Languages & Tools</div>
+                    <div class="stat-label">Años de Experiencia</div>
                   </div>
                   <div class="stat-item">
                     <span class="stat-number">
                       <span
                         data-purecounter-start="0"
-                        data-purecounter-end="3"
+                        data-purecounter-end="8"
                         data-purecounter-duration="2"
                         class="purecounter"
                       ></span
                       >+
                     </span>
-                    <div class="stat-label">Years Experience</div>
+                    <div class="stat-label">Módulos Empresariales Entregados</div>
                   </div>
 
                   <div class="stat-item">
@@ -286,33 +392,33 @@
                       ></span
                       >%
                     </span>
-                    <div class="stat-label">Client Satisfaction</div>
+                    <div class="stat-label">Satisfacción de Clientes</div>
                   </div>
                 </div>
 
                 <div class="details-grid">
                   <div class="detail-row">
                     <div class="detail-item">
-                      <span class="detail-label">Core Skills</span>
+                      <span class="detail-label">Especialidad</span>
                       <span class="detail-value"
-                        >Back-end Development &amp; SOC/NOC Operations</span
+                        >Backend, DevOps & Ciberseguridad SOC</span
                       >
                     </div>
                     <div class="detail-item">
-                      <span class="detail-label">Experience Level</span>
-                      <span class="detail-value">Mid-Level Specialist</span>
+                      <span class="detail-label">Nivel</span>
+                      <span class="detail-value">Especialista Mid-Level</span>
                     </div>
                   </div>
                   <div class="detail-row">
                     <div class="detail-item">
-                      <span class="detail-label">Education</span>
+                      <span class="detail-label">Educación</span>
                       <span class="detail-value"
-                        >Engineering systems (Coursing)</span
+                        >Ingeniería en Sistemas (Espera de Ceremonia)</span
                       >
                     </div>
                     <div class="detail-item">
-                      <span class="detail-label">Languages</span>
-                      <span class="detail-value">English, Spanish</span>
+                      <span class="detail-label">Idiomas</span>
+                      <span class="detail-value">Español, Inglés (B1 Certificado)</span>
                     </div>
                   </div>
                 </div>
@@ -320,15 +426,19 @@
                 <div class="cta-section">
                   <a href="assets/Soruces/CV-CC-ES.pdf" class="btn btn-primary">
                     <i class="bi bi-download"></i>
-                    Download Resume Spanish
+                    Descargar CV (Español)
                   </a>
                   <a href="assets/Soruces/CV-CC-EN.pdf" class="btn btn-primary">
                     <i class="bi bi-download"></i>
-                    Download Resume English
+                    Download Resume (English)
                   </a>
-                  <a href="#" class="btn btn-outline">
+                  <a
+                    href="https://wa.me/573148917721?text=Hola%20Cristian%2C%20quiero%20cotizar%20un%20proyecto"
+                    class="btn btn-outline"
+                    target="_blank"
+                  >
                     <i class="bi bi-chat-dots"></i>
-                    Let's Talk
+                    Hablemos
                   </a>
                 </div>
               </div>
@@ -402,17 +512,258 @@
       </section> -->
       <!-- /Stats Section -->
 
+      <!-- Services Section -->
+      <section id="services" class="services section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Servicios</h2>
+          <p>
+            Soluciones completas para empresas que necesitan construir,
+            modernizar y proteger su software. Desde el código hasta el
+            servidor que lo sirve.
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="service-card position-relative overflow-hidden h-100">
+                <div class="service-icon">
+                  <i class="bi bi-code-slash"></i>
+                </div>
+                <h3><a href="#contact">Desarrollo de Software a Medida</a></h3>
+                <p>
+                  Sistemas web empresariales y soluciones transaccionales con
+                  Java (Spring Boot), Angular y Node.js. Arquitecturas REST,
+                  SOAP (WSDL), microservicios, Webhooks y autenticación JWT.
+                </p>
+                <div class="card-action">
+                  <a href="#contact" title="Cotizar este servicio"
+                    ><i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+              <div class="service-card position-relative overflow-hidden h-100">
+                <div class="service-icon">
+                  <i class="bi bi-arrow-repeat"></i>
+                </div>
+                <h3><a href="#contact">Modernización de Sistemas Legacy</a></h3>
+                <p>
+                  Migro aplicaciones antiguas hacia arquitecturas escalables y
+                  seguras, minimizando el tiempo de inactividad y preservando
+                  la continuidad de tu negocio.
+                </p>
+                <div class="card-action">
+                  <a href="#contact" title="Cotizar este servicio"
+                    ><i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-card position-relative overflow-hidden h-100">
+                <div class="service-icon">
+                  <i class="bi bi-hdd-network"></i>
+                </div>
+                <h3><a href="#contact">Infraestructura, Servidores & DevOps</a></h3>
+                <p>
+                  Administración de servidores Linux y Nginx (proxy inverso,
+                  alta disponibilidad), CI/CD en GitLab, scripts Bash y
+                  despliegues en AWS. Configuración de Cloudflare para CDN,
+                  DNS y protección de tu sitio.
+                </p>
+                <div class="card-action">
+                  <a href="#contact" title="Cotizar este servicio"
+                    ><i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
+              <div class="service-card position-relative overflow-hidden h-100">
+                <div class="service-icon">
+                  <i class="bi bi-shield-lock"></i>
+                </div>
+                <h3><a href="#contact">Ciberseguridad & Monitoreo SOC</a></h3>
+                <p>
+                  Monitoreo, correlación de eventos y respuesta a incidentes
+                  con SIEM/EDR (QRadar, Darktrace, Sentinel, Exabeam).
+                  Hardening, gestión de vulnerabilidades y cumplimiento de SLA.
+                </p>
+                <div class="card-action">
+                  <a href="#contact" title="Cotizar este servicio"
+                    ><i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-card position-relative overflow-hidden h-100">
+                <div class="service-icon">
+                  <i class="bi bi-wordpress"></i>
+                </div>
+                <h3><a href="#contact">Seguridad y Recuperación WordPress</a></h3>
+                <p>
+                  Desinfección de malware, hardening del núcleo y plugins, y
+                  recuperación del posicionamiento SEO afectado por contenido
+                  malicioso.
+                </p>
+                <div class="card-action">
+                  <a href="#contact" title="Cotizar este servicio"
+                    ><i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="350">
+              <div class="service-card position-relative overflow-hidden h-100">
+                <div class="service-icon">
+                  <i class="bi bi-plug"></i>
+                </div>
+                <h3><a href="#contact">Integraciones & Automatización</a></h3>
+                <p>
+                  WebSockets, APIs REST, AJAX/jQuery, generación de reportes y
+                  automatización de procesos para que tus sistemas se
+                  comuniquen sin fricciones.
+                </p>
+                <div class="card-action">
+                  <a href="#contact" title="Cotizar este servicio"
+                    ><i class="bi bi-arrow-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Services Section -->
+
+      <!-- Portfolio Section -->
+      <section id="portfolio" class="portfolio section">
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Proyectos</h2>
+          <p>
+            Casos reales de desarrollo y ciberseguridad, con resultados
+            medibles para el negocio.
+          </p>
+        </div>
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-5">
+            <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="150">
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/portfolio/Camintra.jpg"
+                  class="img-fluid"
+                  alt="Calendario Restrictivo - Intranet Corporativa"
+                  loading="lazy"
+                />
+                <div class="portfolio-info">
+                  <div class="content">
+                    <span class="category">Intranet Corporativa</span>
+                    <h4 class="category">Calendario Restrictivo</h4>
+                    <div class="portfolio-links">
+                      <a
+                        href="assets/img/portfolio/Camintra.jpg"
+                        class="glightbox"
+                        title="Calendario Restrictivo"
+                        ><i class="bi bi-plus-lg"></i
+                      ></a>
+                      <a
+                        href="https://github.com/CamachoLives/CalendarioEmpresarial"
+                        target="_blank"
+                        title="Ver Repositorio en GitHub"
+                        ><i class="bi bi-github"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-caption">
+                <h4>Calendario Restrictivo – Intranet Corporativa</h4>
+                <p>
+                  Plataforma interna para gestión de reuniones, actividades
+                  semanales, recordatorios y manejo de clientes, con control
+                  de accesos por roles. WebSockets para comunicación
+                  bidireccional en tiempo real, consumo de APIs REST vía
+                  Fetch y arquitectura basada en microservicios.
+                </p>
+                <div class="tech-tags">
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">Angular</span>
+                  <span class="tech-tag">WebSockets</span>
+                  <span class="tech-tag">Fetch API</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">Microservicios</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="250">
+              <div class="portfolio-wrap">
+                <img
+                  src="assets/img/portfolio/wd.webp"
+                  class="img-fluid"
+                  alt="Desinfección y Recuperación de Sitio WordPress"
+                  loading="lazy"
+                />
+                <div class="portfolio-info">
+                  <div class="content">
+                    <span class="category">Ciberseguridad Web</span>
+                    <h4 class="category">Recuperación de Sitio WordPress</h4>
+                    <div class="portfolio-links">
+                      <a
+                        href="assets/img/portfolio/wd.webp"
+                        class="glightbox"
+                        title="Recuperación de Sitio WordPress"
+                        ><i class="bi bi-plus-lg"></i
+                      ></a>
+                      <a href="#contact" title="Quiero algo similar"
+                        ><i class="bi bi-arrow-right"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-caption">
+                <h4>Desinfección y Recuperación de Sitio WordPress</h4>
+                <p>
+                  Análisis y eliminación de código malicioso que generaba
+                  contenido no autorizado en resultados de búsqueda.
+                  Hardening del sitio, actualización de plugins y recuperación
+                  total del posicionamiento SEO.
+                </p>
+                <div class="tech-tags">
+                  <span class="tech-tag">WordPress</span>
+                  <span class="tech-tag">PHP</span>
+                  <span class="tech-tag">MySQL</span>
+                  <span class="tech-tag">Google Search Console</span>
+                  <span class="tech-tag">Análisis Forense</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Portfolio Section -->
+
       <!-- Resume Section -->
       <section id="resume" class="resume section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>Resume</h2>
+          <h2>Experiencia</h2>
           <p>
-            Here you can find an overview of my professional journey, showcasing
-            my experience in software development, cybersecurity, and modern
-            technologies. From building secure and scalable applications to
-            monitoring and responding to security incidents, my resume reflects
-            a commitment to delivering efficient and innovative solutions.
+            Trayectoria real en desarrollo backend y ciberseguridad SOC-CERT,
+            trabajando en entornos corporativos, infraestructuras críticas y
+            proyectos bajo estándares PCI y no PCI.
           </p>
         </div>
         <!-- End Section Title -->
@@ -434,19 +785,18 @@
                   />
                 </div>
 
-                <h3>Professional Summary</h3>
+                <h3>Resumen Profesional</h3>
                 <p>
-                  Versatile software developer and cybersecurity analyst with
-                  over two years of experience in building secure, scalable
-                  applications and monitoring critical systems. Skilled in
-                  modern frameworks, backend development, and SIEM tools, with a
-                  strong focus on delivering efficient and innovative solutions
-                  tailored to business needs.
+                  Más de 4 años de experiencia combinada en desarrollo de
+                  software y ciberseguridad. Especializado en modernizar
+                  arquitecturas legacy, construir sistemas web empresariales
+                  escalables y proteger infraestructuras críticas mediante
+                  monitoreo SOC y respuesta a incidentes.
                 </p>
 
-                <h3 class="mt-4">Contact Information</h3>
+                <h3 class="mt-4">Información de Contacto</h3>
                 <ul class="contact-info list-unstyled">
-                  <li><i class="bi bi-geo-alt"></i> Bogota D.C, Colombia</li>
+                  <li><i class="bi bi-geo-alt"></i> Bogotá D.C, Colombia</li>
                   <li><i class="bi bi-envelope"></i> rfcamacris@gmail.com</li>
                   <li><i class="bi bi-phone"></i> +57 314 891 7721</li>
                   <li>
@@ -455,73 +805,15 @@
                   </li>
                 </ul>
 
-                <div class="skills-animation mt-4">
-                  <h3>Technical Skills</h3>
-                  <div class="skill-item">
-                    <div class="d-flex justify-content-between">
-                      <span>Backend Development</span>
-                      <span>90%</span>
-                    </div>
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        aria-valuenow="95"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-
-                  <div class="skill-item">
-                    <div class="d-flex justify-content-between">
-                      <span>Frontend Development</span>
-                      <span>80%</span>
-                    </div>
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        aria-valuenow="85"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-
-                  <div class="skill-item">
-                    <div class="d-flex justify-content-between">
-                      <span>Cybersecurity & Threat Analysis</span>
-                      <span>92%</span>
-                    </div>
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        aria-valuenow="92"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
-
-                  <div class="skill-item">
-                    <div class="d-flex justify-content-between">
-                      <span
-                        >SIEM Tools (QRadar, Darktrace, Exabeam, Azure)</span
-                      >
-                      <span>90%</span>
-                    </div>
-                    <div class="progress">
-                      <div
-                        class="progress-bar"
-                        role="progressbar"
-                        aria-valuenow="90"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                      ></div>
-                    </div>
-                  </div>
+                <div class="cta-section mt-4">
+                  <a
+                    href="https://wa.me/573148917721?text=Hola%20Cristian%2C%20quiero%20cotizar%20un%20proyecto"
+                    class="btn btn-primary w-100"
+                    target="_blank"
+                  >
+                    <i class="bi bi-chat-dots"></i>
+                    Cotizar un Proyecto
+                  </a>
                 </div>
               </div>
             </div>
@@ -531,62 +823,107 @@
               <!-- Experience Section -->
               <div class="resume-section" data-aos="fade-up">
                 <h3>
-                  <i class="bi bi-briefcase me-2"></i>Professional Experience
+                  <i class="bi bi-briefcase me-2"></i>Experiencia Profesional
                 </h3>
 
                 <div class="resume-item">
-                  <h4>Cybersecurity Analyst SOC-CERT/NOC</h4>
-                  <h5>2025 - Present</h5>
-                  <p class="company"><i class="bi bi-building"></i> Mnemo.</p>
+                  <h4>Ingeniero de Desarrollo</h4>
+                  <h5>Septiembre 2025 - Actualidad</h5>
+                  <p class="company"><i class="bi bi-building"></i> Incocrédito</p>
                   <ul>
                     <li>
-                      Monitor and analyze security events using SIEM tools such
-                      as Darktrace, IBM QRadar, Trellix/McAfee, Azure Sentinel,
-                      and Exabeam.
+                      Diseño y desarrollo integrando arquitecturas REST y SOAP
+                      (gestión de contratos WSDL), implementando el modelo de
+                      Webhooks para notificaciones y consumo seguro de APIs
+                      con autenticación JWT.
                     </li>
                     <li>
-                      Investigate and respond to security incidents, applying
-                      threat analysis and mitigation strategies to protect
-                      client infrastructure.
+                      Modernización y transición de arquitecturas legacy hacia
+                      soluciones escalables, usando Java (Spring Boot),
+                      Angular, Python y AWS Lambda.
                     </li>
                     <li>
-                      Generate detailed technical and executive reports with
-                      recommendations for incident prevention and remediation.
+                      Automatización de despliegues (CI/CD) con GitLab y
+                      scripts Bash (.sh) para reducir tiempos de puesta en
+                      producción.
                     </li>
                     <li>
-                      Leverage IBM X-Force for IP reputation analysis and
-                      correlation with threat intelligence databases.
+                      Administración avanzada de servidores Linux y
+                      configuración de Nginx: proxy inverso y enrutamiento de
+                      endpoints para garantizar alta disponibilidad.
+                    </li>
+                    <li>
+                      Gestión de bases de datos relacionales (Informix y SQL)
+                      bajo normativas de seguridad en entornos PCI y no PCI.
+                    </li>
+                    <li>
+                      Soporte técnico de segundo nivel y resolución de bugs en
+                      aplicaciones críticas para asegurar la continuidad del
+                      negocio.
                     </li>
                   </ul>
                 </div>
 
                 <div class="resume-item">
-                  <h4>Full Stack Software Developer</h4>
-                  <h5>2022 - 2025</h5>
+                  <h4>Analista en Ciberseguridad SOC-CERT</h4>
+                  <h5>Enero 2025 - Septiembre 2025</h5>
+                  <p class="company"><i class="bi bi-building"></i> Mnemo</p>
+                  <ul>
+                    <li>
+                      Monitoreo y análisis de eventos, correlación e
+                      interpretación de logs para la detección temprana de
+                      amenazas.
+                    </li>
+                    <li>
+                      Respuesta a incidentes: contención, mitigación,
+                      erradicación y remediación de malware en entornos web y
+                      corporativos, cumpliendo los SLA establecidos.
+                    </li>
+                    <li>
+                      Hardening de sistemas, pruebas de vulnerabilidad y
+                      creación de laboratorios para simulación de ataques y
+                      análisis forense.
+                    </li>
+                    <li>
+                      Uso de SIEM/EDR: Darktrace, IBM/QRadar, Trellix/McAfee,
+                      Azure Sentinel y Exabeam para monitoreo en tiempo real e
+                      investigación de incidentes.
+                    </li>
+                    <li>
+                      Inteligencia de amenazas con IBM X-Force, análisis de
+                      tráfico con Wireshark y correlación de IOCs para
+                      anticipar ataques.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="resume-item">
+                  <h4>Desarrollador Software Backend</h4>
+                  <h5>Diciembre 2021 - Enero 2025</h5>
                   <p class="company">
-                    <i class="bi bi-building"></i> Siscomputo LTDA.
+                    <i class="bi bi-building"></i> Siscomputo LTDA
                   </p>
                   <ul>
                     <li>
-                      Designed, developed, and implemented a web-based business
-                      management system with multiple modules and dashboards.
+                      Diseño e implementación de un sistema web de gestión
+                      empresarial con más de 8 módulos integrados (gestión
+                      documental, auditorías, SG-SST, proveedores, dashboards).
                     </li>
                     <li>
-                      Built document management features, dynamic reports, and
-                      advanced queries tailored to client needs.
+                      Optimización de arquitectura y código: reducción del 35%
+                      en tiempos de carga y mayor estabilidad en producción.
                     </li>
                     <li>
-                      Optimized system performance through architectural
-                      improvements and interactive AJAX/jQuery implementations.
+                      Pruebas funcionales, de integración y QA antes de cada
+                      despliegue, garantizando estabilidad y seguridad.
                     </li>
                     <li>
-                      Provided technical support, trained end-users, and ensured
-                      smooth adoption of platform functionalities.
+                      Capacitación a clientes y soporte post-despliegue,
+                      reduciendo incidencias recurrentes en un 40%.
                     </li>
                     <li>
-                      Remediated a malware-infected WordPress site, restoring
-                      full functionality and implementing security measures to
-                      prevent reinfection.
+                      Implementación de AJAX, jQuery, WebSockets y APIs REST
+                      para comunicación en tiempo real entre módulos.
                     </li>
                   </ul>
                 </div>
@@ -598,98 +935,23 @@
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
-                <h3><i class="bi bi-mortarboard me-2"></i>Education</h3>
+                <h3><i class="bi bi-mortarboard me-2"></i>Educación y Formación</h3>
 
                 <div class="resume-item">
-                  <h4>
-                    Bachelor’s Degree in Systems Engineering (In Progress)
-                  </h4>
-                  <h5>2024 - 2026</h5>
-                  <p class="company">
-                    <i class="bi bi-building"></i> Corporación Unificada
-                    Nacional de Educación Superior CUN
-                  </p>
-                  <p>
-                    Currently completing final semester with a focus on software
-                    development, cybersecurity, and systems architecture.
-                  </p>
+                  <h4>Ingeniería en Sistemas</h4>
+                  <h5>Espera de Ceremonia</h5>
                 </div>
 
                 <div class="resume-item">
-                  <h4>Technologist in Software Analysis and Development</h4>
-                  <h5>2022 - 2024</h5>
-                  <p class="company">
-                    <i class="bi bi-building"></i> SENA – Servicio Nacional de
-                    Aprendizaje
-                  </p>
-                  <p>
-                    Comprehensive training in software design, development, and
-                    maintenance, with emphasis on both front-end and back-end
-                    technologies.
-                  </p>
-                </div>
-                <div class="resume-item">
-                  <h4>Technical Degree in Systems</h4>
-                  <h5>2019 - 2021</h5>
-                  <p><em>SENA – Servicio Nacional de Aprendizaje</em></p>
-                  <p>
-                    Specialized in IT fundamentals, hardware maintenance, and
-                    basic programming.
-                  </p>
-                </div>
-                <div class="resume-item">
-                  <h4>English Language – B2 Certification</h4>
-                  <h5>Certified</h5>
-                  <p><em>International Standard</em></p>
-                </div>
-              </div>
-
-              <!-- Certifications Section -->
-              <div
-                class="resume-section"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <h3><i class="bi bi-award me-2"></i>Certifications</h3>
-
-                <div class="resume-item">
-                  <h4>English Language – B2</h4>
+                  <h4>Tecnólogo en Análisis y Desarrollo del Software</h4>
                 </div>
 
                 <div class="resume-item">
-                  <h4>Java Programming</h4>
+                  <h4>Técnico en Sistemas</h4>
                 </div>
 
                 <div class="resume-item">
-                  <h4>Angular & Spring Boot Development</h4>
-                </div>
-
-                <div class="resume-item">
-                  <h4>React & Spring Boot Development</h4>
-                </div>
-
-                <div class="resume-item">
-                  <h4>Node.js Development</h4>
-                </div>
-
-                <div class="resume-item">
-                  <h4>Introduction to Computer Networks</h4>
-                </div>
-
-                <div class="resume-item">
-                  <h4>Mobile Application Development</h4>
-                </div>
-
-                <div class="resume-item">
-                  <h4>Linux & SQL Tools</h4>
-                </div>
-
-                <div class="resume-item">
-                  <h4>JavaScript Programming</h4>
-                </div>
-
-                <div class="resume-item">
-                  <h4>Internal Telecommunications Networks</h4>
+                  <h4>Inglés Certificado (B1)</h4>
                 </div>
               </div>
             </div>
@@ -698,685 +960,300 @@
       </section>
       <!-- /Resume Section -->
 
-      <!-- Portfolio Section -->
-      <!-- <section id="portfolio" class="portfolio section">
+      <!-- Skills Section -->
+      <section id="skills" class="skills section">
         <div class="container section-title" data-aos="fade-up">
-          <h2>Portfolio</h2>
+          <h2>Habilidades</h2>
           <p>
-            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-            quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-            fugiat sit in iste officiis commodi quidem hic quas.
+            Un stack versátil para cubrir desarrollo, infraestructura y
+            ciberseguridad de punta a punta.
           </p>
         </div>
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div
-            class="isotope-layout"
-            data-default-filter="*"
-            data-layout="masonry"
-            data-sort="original-order"
-          >
-            <div class="row">
-              <div class="col-lg-3 filter-sidebar">
-                <div
-                  class="filters-wrapper"
-                  data-aos="fade-right"
-                  data-aos-delay="150"
-                >
-                  <ul class="portfolio-filters isotope-filters">
-                    <li data-filter="*" class="filter-active">All Projects</li>
-                    <li data-filter=".filter-photography">Photography</li>
-                    <li data-filter=".filter-design">Design</li>
-                    <li data-filter=".filter-automotive">Automotive</li>
-                    <li data-filter=".filter-nature">Nature</li>
-                  </ul>
+          <div class="row">
+            <div class="col-lg-6">
+              <div
+                class="skills-category"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <h3>Ciberseguridad</h3>
+                <div class="skills-animation">
+                  <div class="skill-item">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h4>Respuesta a Incidentes</h4>
+                      <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        aria-valuenow="90"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      Contención, mitigación y erradicación de amenazas
+                      cumpliendo los SLA/ANS establecidos.
+                    </div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h4>Monitoreo & Análisis de Amenazas</h4>
+                      <span class="skill-percentage">88%</span>
+                    </div>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        aria-valuenow="88"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      Correlación de eventos, lectura de logs e inteligencia
+                      de amenazas con IBM X-Force y Wireshark.
+                    </div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h4>SIEM / EDR</h4>
+                      <span class="skill-percentage">92%</span>
+                    </div>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        aria-valuenow="92"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      Darktrace, IBM QRadar, Trellix/McAfee, Azure Sentinel y
+                      Exabeam para monitoreo y automatización.
+                    </div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h4>Remediación de Malware & Hardening</h4>
+                      <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        aria-valuenow="85"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      Eliminación de malware en entornos web, hardening de
+                      sistemas y pruebas de vulnerabilidad.
+                    </div>
+                  </div>
                 </div>
               </div>
+            </div>
 
-              <div class="col-lg-9">
-                <div
-                  class="row gy-4 portfolio-container isotope-container"
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                >
-                  <div
-                    class="col-lg-6 col-md-6 portfolio-item isotope-item filter-photography"
-                  >
-                    <div class="portfolio-wrap">
-                      <img
-                        src="assets/img/portfolio/portfolio-portrait-1.webp"
-                        class="img-fluid"
-                        alt="Portfolio Image"
-                        loading="lazy"
-                      />
-                      <div class="portfolio-info">
-                        <div class="content">
-                          <span class="category">Photography</span>
-                          <h4>Capturing Moments</h4>
-                          <div class="portfolio-links">
-                            <a
-                              href="assets/img/portfolio/portfolio-portrait-1.webp"
-                              class="glightbox"
-                              title="Capturing Moments"
-                              ><i class="bi bi-plus-lg"></i
-                            ></a>
-                            <a
-                              href="portfolio-details.html"
-                              title="More Details"
-                              ><i class="bi bi-arrow-right"></i
-                            ></a>
-                          </div>
-                        </div>
-                      </div>
+            <div class="col-lg-6">
+              <div
+                class="skills-category"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                <h3>Desarrollo & Infraestructura</h3>
+                <div class="skills-animation">
+                  <div class="skill-item">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h4>Backend (Java Spring Boot, Node.js)</h4>
+                      <span class="skill-percentage">92%</span>
+                    </div>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        aria-valuenow="92"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      APIs REST/SOAP, microservicios, Webhooks y autenticación
+                      JWT sobre Java, Node.js e IBM/Domino.
                     </div>
                   </div>
 
-                  <div
-                    class="col-lg-6 col-md-6 portfolio-item isotope-item filter-design"
-                  >
-                    <div class="portfolio-wrap">
-                      <img
-                        src="assets/img/portfolio/portfolio-2.webp"
-                        class="img-fluid"
-                        alt="Portfolio Image"
-                        loading="lazy"
-                      />
-                      <div class="portfolio-info">
-                        <div class="content">
-                          <span class="category">Web Design</span>
-                          <h4>Woodcraft Design</h4>
-                          <div class="portfolio-links">
-                            <a
-                              href="assets/img/portfolio/portfolio-2.webp"
-                              class="glightbox"
-                              title="Woodcraft Design"
-                              ><i class="bi bi-plus-lg"></i
-                            ></a>
-                            <a
-                              href="portfolio-details.html"
-                              title="More Details"
-                              ><i class="bi bi-arrow-right"></i
-                            ></a>
-                          </div>
-                        </div>
-                      </div>
+                  <div class="skill-item">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h4>Frontend (Angular, React)</h4>
+                      <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        aria-valuenow="85"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      Angular, React, AJAX y jQuery para interfaces
+                      interactivas y actualizaciones en tiempo real.
                     </div>
                   </div>
 
-                  <div
-                    class="col-lg-6 col-md-6 portfolio-item isotope-item filter-automotive"
-                  >
-                    <div class="portfolio-wrap">
-                      <img
-                        src="assets/img/portfolio/portfolio-portrait-2.webp"
-                        class="img-fluid"
-                        alt="Portfolio Image"
-                        loading="lazy"
-                      />
-                      <div class="portfolio-info">
-                        <div class="content">
-                          <span class="category">Automotive</span>
-                          <h4>Classic Beauty</h4>
-                          <div class="portfolio-links">
-                            <a
-                              href="assets/img/portfolio/portfolio-portrait-2.webp"
-                              class="glightbox"
-                              title="Classic Beauty"
-                              ><i class="bi bi-plus-lg"></i
-                            ></a>
-                            <a
-                              href="portfolio-details.html"
-                              title="More Details"
-                              ><i class="bi bi-arrow-right"></i
-                            ></a>
-                          </div>
-                        </div>
-                      </div>
+                  <div class="skill-item">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h4>Servidores & DevOps (Linux, Nginx, CI/CD)</h4>
+                      <span class="skill-percentage">88%</span>
+                    </div>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        aria-valuenow="88"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      Administración de Linux y Nginx, automatización CI/CD en
+                      GitLab, scripts Bash y despliegues en AWS Lambda.
                     </div>
                   </div>
 
-                  <div
-                    class="col-lg-6 col-md-6 portfolio-item isotope-item filter-nature"
-                  >
-                    <div class="portfolio-wrap">
-                      <img
-                        src="assets/img/portfolio/portfolio-portrait-4.webp"
-                        class="img-fluid"
-                        alt="Portfolio Image"
-                        loading="lazy"
-                      />
-                      <div class="portfolio-info">
-                        <div class="content">
-                          <span class="category">Nature</span>
-                          <h4>Natural Growth</h4>
-                          <div class="portfolio-links">
-                            <a
-                              href="assets/img/portfolio/portfolio-portrait-4.webp"
-                              class="glightbox"
-                              title="Natural Growth"
-                              ><i class="bi bi-plus-lg"></i
-                            ></a>
-                            <a
-                              href="portfolio-details.html"
-                              title="More Details"
-                              ><i class="bi bi-arrow-right"></i
-                            ></a>
-                          </div>
-                        </div>
-                      </div>
+                  <div class="skill-item">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h4>QA & Automatización</h4>
+                      <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="progress">
+                      <div
+                        class="progress-bar"
+                        role="progressbar"
+                        aria-valuenow="80"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                      ></div>
+                    </div>
+                    <div class="skill-tooltip">
+                      Pruebas funcionales y de integración previas a
+                      producción, generación de reportes y listados maestros.
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-                  <div
-                    class="col-lg-6 col-md-6 portfolio-item isotope-item filter-photography"
-                  >
-                    <div class="portfolio-wrap">
-                      <img
-                        src="assets/img/portfolio/portfolio-5.webp"
-                        class="img-fluid"
-                        alt="Portfolio Image"
-                        loading="lazy"
-                      />
-                      <div class="portfolio-info">
-                        <div class="content">
-                          <span class="category">Photography</span>
-                          <h4>Urban Stories</h4>
-                          <div class="portfolio-links">
-                            <a
-                              href="assets/img/portfolio/portfolio-5.webp"
-                              class="glightbox"
-                              title="Urban Stories"
-                              ><i class="bi bi-plus-lg"></i
-                            ></a>
-                            <a
-                              href="portfolio-details.html"
-                              title="More Details"
-                              ><i class="bi bi-arrow-right"></i
-                            ></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div
-                    class="col-lg-6 col-md-6 portfolio-item isotope-item filter-design"
-                  >
-                    <div class="portfolio-wrap">
-                      <img
-                        src="assets/img/portfolio/portfolio-6.webp"
-                        class="img-fluid"
-                        alt="Portfolio Image"
-                        loading="lazy"
-                      />
-                      <div class="portfolio-info">
-                        <div class="content">
-                          <span class="category">Web Design</span>
-                          <h4>Digital Experience</h4>
-                          <div class="portfolio-links">
-                            <a
-                              href="assets/img/portfolio/portfolio-6.webp"
-                              class="glightbox"
-                              title="Digital Experience"
-                              ><i class="bi bi-plus-lg"></i
-                            ></a>
-                            <a
-                              href="portfolio-details.html"
-                              title="More Details"
-                              ><i class="bi bi-arrow-right"></i
-                            ></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+          <div class="row mt-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-4">
+              <div class="skill-tags-group">
+                <h4>Avanzado</h4>
+                <div class="tech-tags">
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">Spring Boot</span>
+                  <span class="tech-tag">Angular</span>
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">APIs REST / SOAP</span>
+                  <span class="tech-tag">WebSockets</span>
+                  <span class="tech-tag">PostgreSQL / MySQL / SQL</span>
+                  <span class="tech-tag">Informix</span>
+                  <span class="tech-tag">SIEM / EDR</span>
+                  <span class="tech-tag">Wireshark</span>
+                  <span class="tech-tag">CTF</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="skill-tags-group">
+                <h4>Intermedio</h4>
+                <div class="tech-tags">
+                  <span class="tech-tag">Java</span>
+                  <span class="tech-tag">AWS</span>
+                  <span class="tech-tag">Azure</span>
+                  <span class="tech-tag">Linux</span>
+                  <span class="tech-tag">Nginx</span>
+                  <span class="tech-tag">GitLab CI/CD</span>
+                  <span class="tech-tag">Bash / Shell</span>
+                  <span class="tech-tag">Android</span>
+                  <span class="tech-tag">QA</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="skill-tags-group">
+                <h4>Básico</h4>
+                <div class="tech-tags">
+                  <span class="tech-tag">.NET / C# / ASP.NET Core</span>
+                  <span class="tech-tag">WordPress</span>
+                  <span class="tech-tag">PHP</span>
+                  <span class="tech-tag">Docker</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section> -->
-      <!-- /Portfolio Section -->
-
-      <!-- Services Section -->
-
-      <section id="services" class="services section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Skills</h2>
-          <p>
-            Skilled in software development and cybersecurity, with expertise in
-            building secure, scalable applications and monitoring critical
-            systems. Proficient in modern frameworks, back-end development, and
-            SIEM tools, delivering efficient and innovative solutions tailored
-            to business needs.
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <!-- <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-header">
-            <div class="row align-items-center">
-              <div class="col-lg-8 col-md-12">
-                <div class="service-intro">
-                  <h2 class="service-heading">
-                    <div>Innovative Technology</div>
-                    <div><span>Solutions</span></div>
-                  </h2>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-12">
-                <div class="service-summary">
-                  <p>
-                    I combine forward-thinking strategies, creative
-                    problem-solving, and cutting-edge technologies to enhance
-                    security, optimize performance, and deliver exceptional
-                    results for clients across various industries.
-                  </p>
-                  <a href="#resume" class="service-btn">
-                    View Resume
-                    <i class="bi bi-arrow-right"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-        <!-- Skills Section -->
-        <section id="skills" class="skills section">
-          <div class="container" data-aos="fade-up" data-aos-delay="100">
-            <div class="row">
-              <div class="col-lg-6">
-                <div
-                  class="skills-category"
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                >
-                  <h3>Cybersecurity</h3>
-                  <div class="skills-animation">
-                    <div class="skill-item">
-                      <div
-                        class="d-flex justify-content-between align-items-center"
-                      >
-                        <h4>Incident Response</h4>
-                        <span class="skill-percentage">90%</span>
-                      </div>
-                      <div class="progress">
-                        <div
-                          class="progress-bar"
-                          role="progressbar"
-                          aria-valuenow="90"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
-                      </div>
-                      <div class="skill-tooltip">
-                        Skilled in identifying, analyzing, and mitigating
-                        cybersecurity incidents following SOC/CERT
-                        methodologies.
-                      </div>
-                    </div>
-
-                    <div class="skill-item">
-                      <div
-                        class="d-flex justify-content-between align-items-center"
-                      >
-                        <h4>Threat Analysis</h4>
-                        <span class="skill-percentage">85%</span>
-                      </div>
-                      <div class="progress">
-                        <div
-                          class="progress-bar"
-                          role="progressbar"
-                          aria-valuenow="85"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
-                      </div>
-                      <div class="skill-tooltip">
-                        Expertise in detecting and assessing potential threats
-                        using logs, SIEM alerts, and threat intelligence.
-                      </div>
-                    </div>
-
-                    <div class="skill-item">
-                      <div
-                        class="d-flex justify-content-between align-items-center"
-                      >
-                        <h4>SIEM Tools</h4>
-                        <span class="skill-percentage">93%</span>
-                      </div>
-                      <div class="progress">
-                        <div
-                          class="progress-bar"
-                          role="progressbar"
-                          aria-valuenow="93"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
-                      </div>
-                      <div class="skill-tooltip">
-                        Proficient with Darktrace, IBM QRadar, Trellix/McAfee,
-                        Azure Sentinel, and Exabeam for monitoring and
-                        automation.
-                      </div>
-                    </div>
-
-                    <div class="skill-item">
-                      <div
-                        class="d-flex justify-content-between align-items-center"
-                      >
-                        <h4>Malware Remediation</h4>
-                        <span class="skill-percentage">80%</span>
-                      </div>
-                      <div class="progress">
-                        <div
-                          class="progress-bar"
-                          role="progressbar"
-                          aria-valuenow="80"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
-                      </div>
-                      <div class="skill-tooltip">
-                        Experience in removing and preventing malware in web
-                        applications and implementing long-term security
-                        measures.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Frontend Skills -->
-              </div>
-
-              <div class="col-lg-6">
-                <div
-                  class="skills-category"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                >
-                  <h3>Software Development</h3>
-                  <div class="skills-animation">
-                    <div class="skill-item">
-                      <div
-                        class="d-flex justify-content-between align-items-center"
-                      >
-                        <h4>Backend Development</h4>
-                        <span class="skill-percentage">90%</span>
-                      </div>
-                      <div class="progress">
-                        <div
-                          class="progress-bar"
-                          role="progressbar"
-                          aria-valuenow="90"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
-                      </div>
-                      <div class="skill-tooltip">
-                        Strong expertise in backend development using IBM
-                        Domino/HCL Domino, Java, PHP, Node.js, and DQL.
-                      </div>
-                    </div>
-
-                    <div class="skill-item">
-                      <div
-                        class="d-flex justify-content-between align-items-center"
-                      >
-                        <h4>Frontend Development</h4>
-                        <span class="skill-percentage">85%</span>
-                      </div>
-                      <div class="progress">
-                        <div
-                          class="progress-bar"
-                          role="progressbar"
-                          aria-valuenow="85"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
-                      </div>
-                      <div class="skill-tooltip">
-                        Proficient in JavaScript, TypeScript, Angular, React,
-                        jQuery, and AJAX for building interactive user
-                        interfaces.
-                      </div>
-                    </div>
-
-                    <div class="skill-item">
-                      <div
-                        class="d-flex justify-content-between align-items-center"
-                      >
-                        <h4>Quality Assurance (QA)</h4>
-                        <span class="skill-percentage">80%</span>
-                      </div>
-                      <div class="progress">
-                        <div
-                          class="progress-bar"
-                          role="progressbar"
-                          aria-valuenow="80"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
-                      </div>
-                      <div class="skill-tooltip">
-                        Skilled in functional testing, bug tracking, and
-                        ensuring software quality through manual and automated
-                        testing processes.
-                      </div>
-                    </div>
-
-                    <div class="skill-item">
-                      <div
-                        class="d-flex justify-content-between align-items-center"
-                      >
-                        <h4>Mobile Development</h4>
-                        <span class="skill-percentage">70%</span>
-                      </div>
-                      <div class="progress">
-                        <div
-                          class="progress-bar"
-                          role="progressbar"
-                          aria-valuenow="70"
-                          aria-valuemin="0"
-                          aria-valuemax="100"
-                        ></div>
-                      </div>
-                      <div class="skill-tooltip">
-                        Basic experience developing mobile applications with
-                        Flutter and integrating APIs for cross-platform
-                        solutions.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End Backend Skills -->
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- /Skills Section -->
       </section>
-      <!-- /Services Section -->
+      <!-- /Skills Section -->
 
-      <!-- Testimonials Section -->
-      <!-- <section id="testimonials" class="testimonials section light-background">
-       
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Testimonials</h2>
+      <!-- CTA Banner Section -->
+      <section id="cta" class="cta-banner section light-background">
+        <div class="container" data-aos="fade-up">
+          <h2>¿Tienes un proyecto o un incidente de seguridad?</h2>
           <p>
-            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-            consectetur velit
+            Cuéntame qué necesitas y te responderé con una propuesta clara,
+            tiempos realistas y sin rodeos.
           </p>
-        </div>
-       
-
-        <div class="container">
-          <div class="testimonial-masonry">
-            <div class="testimonial-item" data-aos="fade-up">
-              <div class="testimonial-content">
-                <div class="quote-pattern">
-                  <i class="bi bi-quote"></i>
-                </div>
-                <p>
-                  Implementing innovative strategies has revolutionized our
-                  approach to market challenges and competitive positioning.
-                </p>
-                <div class="client-info">
-                  <div class="client-image">
-                    <img src="assets/img/person/person-f-7.webp" alt="Client" />
-                  </div>
-                  <div class="client-details">
-                    <h3>Rachel Bennett</h3>
-                    <span class="position">Strategy Director</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="testimonial-item highlight"
-              data-aos="fade-up"
-              data-aos-delay="100"
+          <div class="cta-buttons">
+            <a
+              href="https://wa.me/573148917721?text=Hola%20Cristian%2C%20quiero%20cotizar%20un%20proyecto"
+              class="btn btn-primary"
+              target="_blank"
+              >Escríbeme por WhatsApp</a
             >
-              <div class="testimonial-content">
-                <div class="quote-pattern">
-                  <i class="bi bi-quote"></i>
-                </div>
-                <p>
-                  Exceptional service delivery and innovative solutions have
-                  transformed our business operations, leading to remarkable
-                  growth and enhanced customer satisfaction across all
-                  touchpoints.
-                </p>
-                <div class="client-info">
-                  <div class="client-image">
-                    <img src="assets/img/person/person-m-7.webp" alt="Client" />
-                  </div>
-                  <div class="client-details">
-                    <h3>Daniel Morgan</h3>
-                    <span class="position">Chief Innovation Officer</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="testimonial-item"
-              data-aos="fade-up"
-              data-aos-delay="200"
+            <a href="mailto:rfcamacris@gmail.com" class="btn btn-outline"
+              >Enviar un Correo</a
             >
-              <div class="testimonial-content">
-                <div class="quote-pattern">
-                  <i class="bi bi-quote"></i>
-                </div>
-                <p>
-                  Strategic partnership has enabled seamless digital
-                  transformation and operational excellence.
-                </p>
-                <div class="client-info">
-                  <div class="client-image">
-                    <img src="assets/img/person/person-f-8.webp" alt="Client" />
-                  </div>
-                  <div class="client-details">
-                    <h3>Emma Thompson</h3>
-                    <span class="position">Digital Lead</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="testimonial-item"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="testimonial-content">
-                <div class="quote-pattern">
-                  <i class="bi bi-quote"></i>
-                </div>
-                <p>
-                  Professional expertise and dedication have significantly
-                  improved our project delivery timelines and quality metrics.
-                </p>
-                <div class="client-info">
-                  <div class="client-image">
-                    <img src="assets/img/person/person-m-8.webp" alt="Client" />
-                  </div>
-                  <div class="client-details">
-                    <h3>Christopher Lee</h3>
-                    <span class="position">Technical Director</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="testimonial-item highlight"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div class="testimonial-content">
-                <div class="quote-pattern">
-                  <i class="bi bi-quote"></i>
-                </div>
-                <p>
-                  Collaborative approach and industry expertise have
-                  revolutionized our product development cycle, resulting in
-                  faster time-to-market and increased customer engagement
-                  levels.
-                </p>
-                <div class="client-info">
-                  <div class="client-image">
-                    <img src="assets/img/person/person-f-9.webp" alt="Client" />
-                  </div>
-                  <div class="client-details">
-                    <h3>Olivia Carter</h3>
-                    <span class="position">Product Manager</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="testimonial-item"
-              data-aos="fade-up"
-              data-aos-delay="500"
-            >
-              <div class="testimonial-content">
-                <div class="quote-pattern">
-                  <i class="bi bi-quote"></i>
-                </div>
-                <p>
-                  Innovative approach to user experience design has
-                  significantly enhanced our platform's engagement metrics and
-                  customer retention rates.
-                </p>
-                <div class="client-info">
-                  <div class="client-image">
-                    <img
-                      src="assets/img/person/person-m-13.webp"
-                      alt="Client"
-                    />
-                  </div>
-                  <div class="client-details">
-                    <h3>Nathan Brooks</h3>
-                    <span class="position">UX Director</span>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
-      </section> -->
-      <!-- /Testimonials Section -->
+      </section>
+      <!-- /CTA Banner Section -->
 
       <!-- Contact Section -->
       <section id="contact" class="contact section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-          <h2>Contact</h2>
+          <h2>Contacto</h2>
+          <p>
+            Cuéntame en qué estás trabajando y te contacto en menos de 24
+            horas con una propuesta a la medida.
+          </p>
         </div>
         <!-- End Section Title -->
 
@@ -1384,15 +1261,15 @@
           <div class="row g-4 g-lg-5 justify-content-center">
             <div class="col-lg-5">
               <div class="info-box">
-                <h3>Contact Info</h3>
+                <h3>Información de Contacto</h3>
 
                 <div class="info-item">
                   <div class="icon-box">
                     <i class="bi bi-geo-alt"></i>
                   </div>
                   <div class="content">
-                    <h4>Location</h4>
-                    <p>Bogota D.C</p>
+                    <h4>Ubicación</h4>
+                    <p>Bogotá D.C</p>
                     <p>Colombia</p>
                   </div>
                 </div>
@@ -1402,9 +1279,8 @@
                     <i class="bi bi-telephone"></i>
                   </div>
                   <div class="content">
-                    <h4>Phone Number</h4>
+                    <h4>Teléfono / WhatsApp</h4>
                     <p>+57 314 891 7721</p>
-                    <p>+57 310 864 0765</p>
                   </div>
                 </div>
 
@@ -1413,7 +1289,7 @@
                     <i class="bi bi-envelope"></i>
                   </div>
                   <div class="content">
-                    <h4>Email Address</h4>
+                    <h4>Correo Electrónico</h4>
                     <p>rfcamacris@gmail.com</p>
                   </div>
                 </div>
@@ -1423,7 +1299,7 @@
                     <i class="bi bi-linkedin"></i>
                   </div>
                   <div class="content">
-                    <h4>linkedin</h4>
+                    <h4>LinkedIn</h4>
                     <p>linkedin.com/in/cristiancamacho2004/</p>
                   </div>
                 </div>
@@ -1433,80 +1309,42 @@
                     <i class="bi bi-github"></i>
                   </div>
                   <div class="content">
-                    <h4>github</h4>
+                    <h4>GitHub</h4>
                     <p>github.com/CamachoLives</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <!-- <div class="col-lg-7">
+            <div class="col-lg-7">
               <div class="contact-form">
-                <h3>Get In Touch</h3>
+                <h3>Hablemos de tu Proyecto</h3>
                 <p>
-                  Praesent sapien massa, convallis a pellentesque nec, egestas
-                  non nisi. Vestibulum ante ipsum primis.
+                  El correo y el formulario tradicional pueden tardar. Para
+                  una respuesta más rápida, escríbeme directamente por
+                  WhatsApp o correo con una breve descripción de lo que
+                  necesitas.
                 </p>
 
-                <form
-                  action="forms/contact.php"
-                  method="post"
-                  class="php-email-form"
-                >
-                  <div class="row gy-4">
-                    <div class="col-md-6">
-                      <input
-                        type="text"
-                        name="name"
-                        class="form-control"
-                        placeholder="Your Name"
-                        required=""
-                      />
-                    </div>
-
-                    <div class="col-md-6">
-                      <input
-                        type="email"
-                        class="form-control"
-                        name="email"
-                        placeholder="Your Email"
-                        required=""
-                      />
-                    </div>
-
-                    <div class="col-12">
-                      <input
-                        type="text"
-                        class="form-control"
-                        name="subject"
-                        placeholder="Subject"
-                        required=""
-                      />
-                    </div>
-
-                    <div class="col-12">
-                      <textarea
-                        class="form-control"
-                        name="message"
-                        rows="6"
-                        placeholder="Message"
-                        required=""
-                      ></textarea>
-                    </div>
-
-                    <div class="col-12 text-center">
-                      <div class="loading">Loading</div>
-                      <div class="error-message"></div>
-                      <div class="sent-message">
-                        Your message has been sent. Thank you!
-                      </div>
-
-                      <button type="submit" class="btn">Send Message</button>
-                    </div>
-                  </div>
-                </form>
+                <div class="cta-buttons" style="justify-content: flex-start;">
+                  <a
+                    href="https://wa.me/573148917721?text=Hola%20Cristian%2C%20quiero%20cotizar%20un%20proyecto"
+                    class="btn btn-primary"
+                    target="_blank"
+                  >
+                    <i class="bi bi-whatsapp"></i>
+                    Escribir por WhatsApp
+                  </a>
+                  <a
+                    href="mailto:rfcamacris@gmail.com?subject=Cotizaci%C3%B3n%20de%20Proyecto"
+                    class="btn btn-outline"
+                  >
+                    <i class="bi bi-envelope"></i>
+                    Enviar Correo
+                  </a>
+                </div>
               </div>
-            </div> -->
+            </div>
           </div>
         </div>
       </section>
@@ -1519,15 +1357,14 @@
           <p>
             © <span>Copyright</span>
             <strong class="px-1 sitename">Cristian Camacho</strong>
-            <span>All Rights Reserved</span>
+            <span>Todos los derechos reservados</span>
           </p>
         </div>
         <div class="credits">
           <!-- All the links in the footer should remain intact. -->
           <!-- You can delete the links only if you've purchased the pro version. -->
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by CamachoLives
+          Diseñado y desarrollado por Cristian Camacho
         </div>
       </div>
     </footer>
