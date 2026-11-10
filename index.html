@@ -150,6 +150,31 @@
         color: var(--accent-color);
       }
 
+      /* Portfolio Fallback Images */
+      .portfolio-img-fallback {
+        width: 100%;
+        height: 260px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        position: relative;
+      }
+      .mechanicsoft-bg {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+      }
+      .movig-bg {
+        background: linear-gradient(135deg, #0d1117 0%, #1c2333 40%, #0d2137 100%);
+      }
+      .fallback-label {
+        font-size: 32px;
+        font-weight: 800;
+        color: rgba(255,255,255,0.15);
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        user-select: none;
+      }
+
       /* GitHub Repos Section */
       .github-repo-card {
         background: color-mix(in srgb, var(--surface-color), transparent 20%);
@@ -1097,6 +1122,98 @@
                   <span class="tech-tag">MySQL</span>
                   <span class="tech-tag">Google Search Console</span>
                   <span class="tech-tag">Análisis Forense</span>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="350">
+              <div class="portfolio-wrap">
+                <div class="portfolio-img-fallback mechanicsoft-bg">
+                  <span class="fallback-label">MechanicSoft</span>
+                </div>
+                <div class="portfolio-info">
+                  <div class="content">
+                    <span class="category">Sistema de Gestión</span>
+                    <h4 class="category">MechanicSoft</h4>
+                    <div class="portfolio-links">
+                      <a
+                        href="https://github.com/CamachoLives/MechanicSoftRest"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Ver Repositorio en GitHub"
+                        ><i class="bi bi-github"></i
+                      ></a>
+                      <a
+                        href="https://wa.me/573148917721?text=Hola%20Cristian%2C%20quiero%20algo%20similar%20a%20MechanicSoft"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Quiero algo similar"
+                        ><i class="bi bi-whatsapp"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-caption">
+                <h4>MechanicSoft – Sistema de Gestión para Talleres</h4>
+                <p>
+                  Plataforma para digitalizar la operación de talleres de motos:
+                  registro de vehículos, órdenes de servicio, seguimiento de
+                  reparaciones y automatización de procesos. API REST con
+                  package-by-feature, validaciones y Docker Compose.
+                </p>
+                <div class="tech-tags">
+                  <span class="tech-tag">Java 17</span>
+                  <span class="tech-tag">Spring Boot 3</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">Docker Compose</span>
+                  <span class="tech-tag">React + Vite</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="450">
+              <div class="portfolio-wrap">
+                <div class="portfolio-img-fallback movig-bg">
+                  <span class="fallback-label">Movig</span>
+                </div>
+                <div class="portfolio-info">
+                  <div class="content">
+                    <span class="category">Sitio Web Corporativo</span>
+                    <h4 class="category">Movig.com.co</h4>
+                    <div class="portfolio-links">
+                      <a
+                        href="https://movig.com.co"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Ver sitio en vivo"
+                        ><i class="bi bi-box-arrow-up-right"></i
+                      ></a>
+                      <a
+                        href="https://wa.me/573148917721?text=Hola%20Cristian%2C%20quiero%20un%20sitio%20web%20similar%20a%20Movig"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        title="Quiero algo similar"
+                        ><i class="bi bi-whatsapp"></i
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-caption">
+                <h4>Movig – Sitio Web de Videovigilancia</h4>
+                <p>
+                  Diseño, desarrollo y puesta en producción del sitio web de
+                  una empresa de videovigilancia (cámaras, monitoreo 24/7 y
+                  nube). Sitio responsivo con integración de WhatsApp, redes
+                  sociales y video. Infraestructura completa en Cloudflare.
+                </p>
+                <div class="tech-tags">
+                  <span class="tech-tag">HTML5</span>
+                  <span class="tech-tag">CSS3</span>
+                  <span class="tech-tag">JavaScript</span>
+                  <span class="tech-tag">Cloudflare CDN</span>
                 </div>
               </div>
             </div>
