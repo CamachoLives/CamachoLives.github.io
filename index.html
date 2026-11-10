@@ -150,6 +150,45 @@
         color: var(--accent-color);
       }
 
+      /* Impact Counters */
+      .impact-counter {
+        padding: 28px 16px;
+        border-radius: 16px;
+        background: color-mix(in srgb, var(--surface-color), transparent 30%);
+        border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+        height: 100%;
+        transition: all 0.3s ease;
+      }
+      .impact-counter:hover {
+        border-color: var(--accent-color);
+        box-shadow: 0 4px 24px color-mix(in srgb, var(--accent-color), transparent 80%);
+        transform: translateY(-4px);
+      }
+      .impact-icon {
+        font-size: 32px;
+        color: var(--accent-color);
+        margin-bottom: 12px;
+      }
+      .impact-number {
+        font-size: 40px;
+        font-weight: 900;
+        color: var(--accent-color);
+        line-height: 1.1;
+        margin-bottom: 8px;
+      }
+      .impact-label {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--heading-color);
+        margin-bottom: 6px;
+        line-height: 1.4;
+      }
+      .impact-source {
+        font-size: 11px;
+        color: color-mix(in srgb, var(--default-color), transparent 45%);
+        font-style: italic;
+      }
+
       /* Hero NexCam additions */
       .nexcam-badge {
         display: inline-flex;
@@ -1755,6 +1794,69 @@
         </div>
       </section>
       <!-- /Resume Section -->
+
+      <!-- Impact Section -->
+      <section id="impact" class="impact section light-background">
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Impacto Real</h2>
+          <p>Resultados medibles, no solo código. Cada número viene de un proyecto real.</p>
+        </div>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4 justify-content-center text-center">
+            <div class="col-lg-2 col-md-4 col-6" data-aos="zoom-in" data-aos-delay="100">
+              <div class="impact-counter">
+                <div class="impact-icon"><i class="bi bi-speedometer2"></i></div>
+                <div class="impact-number">
+                  <span data-purecounter-start="0" data-purecounter-end="35" data-purecounter-duration="2" class="purecounter"></span>%
+                </div>
+                <div class="impact-label">Reducción en tiempos de carga</div>
+                <div class="impact-source">Siscomputo LTDA</div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6" data-aos="zoom-in" data-aos-delay="150">
+              <div class="impact-counter">
+                <div class="impact-icon"><i class="bi bi-graph-down-arrow"></i></div>
+                <div class="impact-number">
+                  <span data-purecounter-start="0" data-purecounter-end="40" data-purecounter-duration="2" class="purecounter"></span>%
+                </div>
+                <div class="impact-label">Reducción de incidencias recurrentes</div>
+                <div class="impact-source">Siscomputo LTDA</div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6" data-aos="zoom-in" data-aos-delay="200">
+              <div class="impact-counter">
+                <div class="impact-icon"><i class="bi bi-boxes"></i></div>
+                <div class="impact-number">
+                  <span data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="2" class="purecounter"></span>
+                </div>
+                <div class="impact-label">Servicios legacy dockerizados</div>
+                <div class="impact-source">Incocrédito</div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6" data-aos="zoom-in" data-aos-delay="250">
+              <div class="impact-counter">
+                <div class="impact-icon"><i class="bi bi-grid-3x3-gap"></i></div>
+                <div class="impact-number">
+                  <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="2" class="purecounter"></span>+
+                </div>
+                <div class="impact-label">Módulos empresariales entregados</div>
+                <div class="impact-source">Siscomputo LTDA</div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6" data-aos="zoom-in" data-aos-delay="300">
+              <div class="impact-counter">
+                <div class="impact-icon"><i class="bi bi-shield-check"></i></div>
+                <div class="impact-number">
+                  <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="2" class="purecounter"></span>
+                </div>
+                <div class="impact-label">Certificación PCI-DSS gestionada</div>
+                <div class="impact-source">Incocrédito</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Impact Section -->
 
       <!-- Skills Section -->
       <section id="skills" class="skills section">
