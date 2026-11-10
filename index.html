@@ -150,6 +150,106 @@
         color: var(--accent-color);
       }
 
+      /* Pricing Cards */
+      .pricing-card {
+        background: color-mix(in srgb, var(--surface-color), transparent 20%);
+        border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+        border-radius: 20px;
+        padding: 36px 28px;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      .pricing-card:hover {
+        border-color: var(--accent-color);
+        box-shadow: 0 8px 40px color-mix(in srgb, var(--accent-color), transparent 75%);
+        transform: translateY(-8px);
+      }
+      .pricing-card.featured {
+        border-color: var(--accent-color);
+        box-shadow: 0 4px 32px color-mix(in srgb, var(--accent-color), transparent 65%);
+        transform: scale(1.03);
+      }
+      .pricing-badge {
+        display: inline-block;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        padding: 4px 14px;
+        border-radius: 20px;
+        background: color-mix(in srgb, var(--accent-color), transparent 85%);
+        color: var(--accent-color);
+        border: 1px solid color-mix(in srgb, var(--accent-color), transparent 70%);
+        margin-bottom: 20px;
+        width: fit-content;
+      }
+      .featured-badge {
+        background: var(--accent-color);
+        color: var(--contrast-color);
+        border-color: var(--accent-color);
+      }
+      .pricing-icon {
+        font-size: 40px;
+        color: var(--accent-color);
+        margin-bottom: 16px;
+      }
+      .pricing-name {
+        font-size: 26px;
+        font-weight: 800;
+        color: var(--heading-color);
+        margin-bottom: 10px;
+      }
+      .pricing-desc {
+        font-size: 14px;
+        color: color-mix(in srgb, var(--default-color), transparent 25%);
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+      .pricing-features {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 28px;
+        flex-grow: 1;
+      }
+      .pricing-features li {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 14px;
+        color: color-mix(in srgb, var(--default-color), transparent 10%);
+        padding: 7px 0;
+        border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+      }
+      .pricing-features li i {
+        color: var(--accent-color);
+        font-size: 15px;
+        margin-top: 2px;
+        flex-shrink: 0;
+      }
+      .pricing-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 13px 24px;
+        border-radius: 50px;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        background: color-mix(in srgb, var(--accent-color), transparent 85%);
+        color: var(--accent-color);
+        border: 2px solid var(--accent-color);
+        transition: all 0.3s ease;
+        margin-top: auto;
+      }
+      .pricing-btn:hover, .pricing-btn.featured-btn {
+        background: var(--accent-color);
+        color: var(--contrast-color);
+      }
+
       /* Process Steps */
       .process-step {
         text-align: center;
@@ -1776,6 +1876,75 @@
         </div>
       </section>
       <!-- /CTA Banner Section -->
+
+      <!-- Pricing Section -->
+      <section id="pricing" class="pricing section">
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Paquetes & Inversión</h2>
+          <p>Elige el que mejor se ajusta a tu proyecto. Sin costos ocultos.</p>
+        </div>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4 justify-content-center">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="pricing-card h-100">
+                <div class="pricing-badge">Ideal para Empezar</div>
+                <div class="pricing-icon"><i class="bi bi-rocket-takeoff"></i></div>
+                <h3 class="pricing-name">Starter</h3>
+                <p class="pricing-desc">Para proyectos pequeños con objetivos claros y tiempos definidos.</p>
+                <ul class="pricing-features">
+                  <li><i class="bi bi-check-circle-fill"></i> Landing page o microservicio simple</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Integración básica de API REST</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Despliegue en producción</li>
+                  <li><i class="bi bi-check-circle-fill"></i> 2 semanas de entrega estimada</li>
+                  <li><i class="bi bi-check-circle-fill"></i> 30 días de soporte post-entrega</li>
+                </ul>
+                <a href="https://wa.me/573148917721?text=Hola%20Cristian%2C%20quiero%20el%20paquete%20Starter" class="pricing-btn" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-whatsapp"></i> Cotizar este paquete
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="pricing-card featured h-100">
+                <div class="pricing-badge featured-badge">Más Popular</div>
+                <div class="pricing-icon"><i class="bi bi-layers"></i></div>
+                <h3 class="pricing-name">Pro</h3>
+                <p class="pricing-desc">Para sistemas completos con múltiples módulos y arquitectura moderna.</p>
+                <ul class="pricing-features">
+                  <li><i class="bi bi-check-circle-fill"></i> Sistema web completo con módulos</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Arquitectura de microservicios</li>
+                  <li><i class="bi bi-check-circle-fill"></i> CI/CD básico y Docker</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Autenticación JWT + roles</li>
+                  <li><i class="bi bi-check-circle-fill"></i> 4–8 semanas de entrega estimada</li>
+                  <li><i class="bi bi-check-circle-fill"></i> 60 días de soporte post-entrega</li>
+                </ul>
+                <a href="https://wa.me/573148917721?text=Hola%20Cristian%2C%20quiero%20el%20paquete%20Pro" class="pricing-btn featured-btn" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-whatsapp"></i> Cotizar este paquete
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="pricing-card h-100">
+                <div class="pricing-badge">Proyectos Complejos</div>
+                <div class="pricing-icon"><i class="bi bi-building-gear"></i></div>
+                <h3 class="pricing-name">Enterprise</h3>
+                <p class="pricing-desc">Para transformaciones digitales, modernización legacy y seguridad avanzada.</p>
+                <ul class="pricing-features">
+                  <li><i class="bi bi-check-circle-fill"></i> Modernización de sistemas legacy</li>
+                  <li><i class="bi bi-check-circle-fill"></i> DevSecOps completo</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Cumplimiento PCI-DSS</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Integración con IA & automatización</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Plazos acordados según alcance</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Soporte extendido dedicado</li>
+                </ul>
+                <a href="https://wa.me/573148917721?text=Hola%20Cristian%2C%20quiero%20el%20paquete%20Enterprise" class="pricing-btn" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-whatsapp"></i> Cotizar este paquete
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Pricing Section -->
 
       <!-- Process Section -->
       <section id="proceso" class="proceso section light-background">
