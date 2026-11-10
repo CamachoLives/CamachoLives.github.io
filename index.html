@@ -150,6 +150,49 @@
         color: var(--accent-color);
       }
 
+      /* Process Steps */
+      .process-step {
+        text-align: center;
+        padding: 36px 24px;
+        border-radius: 16px;
+        background: color-mix(in srgb, var(--surface-color), transparent 30%);
+        border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+        height: 100%;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+      .process-step:hover {
+        border-color: var(--accent-color);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 32px color-mix(in srgb, var(--accent-color), transparent 80%);
+      }
+      .step-number {
+        font-size: 56px;
+        font-weight: 900;
+        color: color-mix(in srgb, var(--accent-color), transparent 85%);
+        line-height: 1;
+        margin-bottom: 12px;
+        font-family: 'Roboto', sans-serif;
+      }
+      .step-icon {
+        font-size: 36px;
+        color: var(--accent-color);
+        margin-bottom: 16px;
+      }
+      .process-step h4 {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--heading-color);
+        margin-bottom: 12px;
+      }
+      .process-step p {
+        font-size: 14px;
+        color: color-mix(in srgb, var(--default-color), transparent 20%);
+        line-height: 1.65;
+        margin: 0;
+      }
+
       /* Portfolio Fallback Images */
       .portfolio-img-fallback {
         width: 100%;
@@ -1733,6 +1776,56 @@
         </div>
       </section>
       <!-- /CTA Banner Section -->
+
+      <!-- Process Section -->
+      <section id="proceso" class="proceso section light-background">
+        <div class="container section-title" data-aos="fade-up">
+          <h2>¿Cómo trabajamos juntos?</h2>
+          <p>Un proceso claro, sin sorpresas y con resultados reales.</p>
+        </div>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4">
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="process-step">
+                <div class="step-number">01</div>
+                <div class="step-icon"><i class="bi bi-chat-quote"></i></div>
+                <h4>Consulta Inicial</h4>
+                <p>Me cuentas tu idea o problema. Respondo en menos de 24h con claridad sobre lo que se puede hacer y cómo.</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="process-step">
+                <div class="step-number">02</div>
+                <div class="step-icon"><i class="bi bi-file-earmark-check"></i></div>
+                <h4>Propuesta & Alcance</h4>
+                <p>Te entrego una propuesta clara: qué se hace, en cuánto tiempo y cuánto cuesta. Sin letra pequeña ni costos ocultos.</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="process-step">
+                <div class="step-number">03</div>
+                <div class="step-icon"><i class="bi bi-code-square"></i></div>
+                <h4>Desarrollo & Entregas</h4>
+                <p>Trabajo con iteraciones cortas y te muestro avances reales. Siempre disponible para ajustes durante el proceso.</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="process-step">
+                <div class="step-number">04</div>
+                <div class="step-icon"><i class="bi bi-patch-check"></i></div>
+                <h4>Entrega & Soporte</h4>
+                <p>Deploy, documentación y soporte post-entrega. Tu inversión protegida y tu equipo capacitado.</p>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="500">
+            <a href="https://wa.me/573148917721?text=Hola%20Cristian%2C%20quiero%20iniciar%20una%20consulta%20inicial" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-whatsapp me-2"></i>Iniciar Consulta
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- /Process Section -->
 
       <!-- Contact Section -->
       <section id="contact" class="contact section">
