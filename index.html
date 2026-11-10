@@ -150,6 +150,38 @@
         color: var(--accent-color);
       }
 
+      /* Trust Section */
+      .trust-item {
+        padding: 32px 20px;
+        border-radius: 16px;
+        background: color-mix(in srgb, var(--surface-color), transparent 30%);
+        border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+        height: 100%;
+        transition: all 0.3s ease;
+      }
+      .trust-item:hover {
+        border-color: var(--accent-color);
+        box-shadow: 0 4px 24px color-mix(in srgb, var(--accent-color), transparent 80%);
+        transform: translateY(-4px);
+      }
+      .trust-icon {
+        font-size: 44px;
+        color: var(--accent-color);
+        margin-bottom: 16px;
+      }
+      .trust-item h4 {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--heading-color);
+        margin-bottom: 10px;
+      }
+      .trust-item p {
+        font-size: 14px;
+        color: color-mix(in srgb, var(--default-color), transparent 20%);
+        line-height: 1.6;
+        margin: 0;
+      }
+
       /* Pricing Cards */
       .pricing-card {
         background: color-mix(in srgb, var(--surface-color), transparent 20%);
@@ -927,6 +959,47 @@
         </div>
       </section> -->
       <!-- /Stats Section -->
+
+      <!-- Trust Section -->
+      <section id="trust" class="trust section light-background">
+        <div class="container" data-aos="fade-up">
+          <div class="container section-title" data-aos="fade-up">
+            <h2>Respaldo Técnico & Reconocimientos</h2>
+            <p>Experiencia verificable, estándares internacionales y compromiso real con cada proyecto.</p>
+          </div>
+          <div class="row gy-4 justify-content-center text-center">
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+              <div class="trust-item">
+                <div class="trust-icon"><i class="bi bi-shield-check"></i></div>
+                <h4>PCI-DSS</h4>
+                <p>Lideré la recolección y presentación de evidencias para certificación PCI-DSS ante auditor QSA en entidad financiera.</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+              <div class="trust-item">
+                <div class="trust-icon"><i class="bi bi-bank"></i></div>
+                <h4>Sector Financiero</h4>
+                <p>Soluciones para la gran mayoría de los bancos del país a través de Incocrédito — entidad de referencia en prevención de fraude.</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+              <div class="trust-item">
+                <div class="trust-icon"><i class="bi bi-translate"></i></div>
+                <h4>Inglés B1–B2</h4>
+                <p>Comunicación fluida con clientes internacionales, documentación técnica y lectura de especificaciones en inglés.</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+              <div class="trust-item">
+                <div class="trust-icon"><i class="bi bi-clock-history"></i></div>
+                <h4>4+ Años</h4>
+                <p>Más de 4 años de experiencia acumulada en desarrollo full stack, DevSecOps y ciberseguridad en entornos de producción reales.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Trust Section -->
 
       <!-- AI Solutions Section -->
       <section id="ai-solutions" class="ai-solutions section light-background">
