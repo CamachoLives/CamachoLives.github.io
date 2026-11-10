@@ -150,6 +150,80 @@
         color: var(--accent-color);
       }
 
+      /* GitHub Repos Section */
+      .github-repo-card {
+        background: color-mix(in srgb, var(--surface-color), transparent 20%);
+        border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+        border-radius: 12px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s ease;
+      }
+      .github-repo-card:hover {
+        border-color: var(--accent-color);
+        box-shadow: 0 4px 24px color-mix(in srgb, var(--accent-color), transparent 75%);
+        transform: translateY(-4px);
+      }
+      .repo-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 14px;
+      }
+      .repo-icon {
+        font-size: 28px;
+        color: var(--accent-color);
+      }
+      .repo-actions a {
+        color: color-mix(in srgb, var(--default-color), transparent 40%);
+        font-size: 18px;
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .repo-actions a:hover { color: var(--accent-color); }
+      .repo-name {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--heading-color);
+        margin-bottom: 8px;
+      }
+      .repo-desc {
+        font-size: 14px;
+        color: color-mix(in srgb, var(--default-color), transparent 25%);
+        line-height: 1.6;
+        flex-grow: 1;
+        margin-bottom: 16px;
+      }
+      .repo-footer {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin-top: auto;
+      }
+      .repo-lang {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 13px;
+        color: color-mix(in srgb, var(--default-color), transparent 20%);
+      }
+      .lang-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: inline-block;
+        flex-shrink: 0;
+      }
+      .repo-stat {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        font-size: 13px;
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+      }
+
       /* AI Solutions Section */
       .ai-solution-card {
         background: color-mix(in srgb, var(--surface-color), transparent 30%);
@@ -1031,6 +1105,28 @@
       </section>
       <!-- /Portfolio Section -->
 
+      <!-- GitHub Repos Section -->
+      <section id="github-projects" class="github-section section light-background">
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Repositorios en GitHub</h2>
+          <p>Proyectos open source y muestras de código. Actualizados en tiempo real desde GitHub.</p>
+        </div>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div id="github-repos-grid" class="row gy-4">
+            <div class="col-12 text-center" id="github-loading">
+              <div class="spinner-border" role="status" style="color: var(--accent-color)"></div>
+              <p class="mt-2">Cargando repositorios...</p>
+            </div>
+          </div>
+          <div class="text-center mt-4">
+            <a href="https://github.com/CamachoLives" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              <i class="bi bi-github me-2"></i>Ver todos en GitHub
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- /GitHub Repos Section -->
+
       <!-- Resume Section -->
       <section id="resume" class="resume section">
         <!-- Section Title -->
@@ -1682,5 +1778,50 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+
+    <!-- GitHub Repos Dynamic Loader -->
+    <script>
+    (function() {
+      const grid = document.getElementById('github-repos-grid');
+      const loading = document.getElementById('github-loading');
+      const langColors = {
+        'JavaScript': '#f1e05a', 'TypeScript': '#3178c6', 'Java': '#b07219',
+        'Python': '#3572A5', 'HTML': '#e34c26', 'CSS': '#563d7c',
+        'Shell': '#89e051', 'PHP': '#4F5D95', 'Go': '#00ADD8', 'Rust': '#dea584'
+      };
+      fetch('https://api.github.com/users/CamachoLives/repos?sort=updated&per_page=12&type=owner')
+        .then(function(r) { return r.json(); })
+        .then(function(repos) {
+          if (loading) loading.remove();
+          var filtered = repos.filter(function(r) { return !r.fork; }).slice(0, 6);
+          filtered.forEach(function(repo) {
+            var langColor = langColors[repo.language] || '#8b949e';
+            var col = document.createElement('div');
+            col.className = 'col-lg-4 col-md-6';
+            col.setAttribute('data-aos', 'fade-up');
+            col.innerHTML =
+              '<div class="github-repo-card h-100">' +
+                '<div class="repo-header">' +
+                  '<i class="bi bi-folder2-open repo-icon"></i>' +
+                  '<div class="repo-actions">' +
+                    '<a href="' + repo.html_url + '" target="_blank" rel="noopener noreferrer" title="Ver en GitHub"><i class="bi bi-box-arrow-up-right"></i></a>' +
+                  '</div>' +
+                '</div>' +
+                '<h4 class="repo-name">' + repo.name + '</h4>' +
+                '<p class="repo-desc">' + (repo.description || 'Repositorio de código.') + '</p>' +
+                '<div class="repo-footer">' +
+                  (repo.language ? '<span class="repo-lang"><span class="lang-dot" style="background:' + langColor + '"></span>' + repo.language + '</span>' : '') +
+                  '<span class="repo-stat"><i class="bi bi-star"></i> ' + repo.stargazers_count + '</span>' +
+                  '<span class="repo-stat"><i class="bi bi-diagram-2"></i> ' + repo.forks_count + '</span>' +
+                '</div>' +
+              '</div>';
+            grid.appendChild(col);
+          });
+        })
+        .catch(function() {
+          if (loading) loading.innerHTML = '<p class="text-muted">No se pudieron cargar los repositorios en este momento.</p>';
+        });
+    })();
+    </script>
   </body>
 </html>
