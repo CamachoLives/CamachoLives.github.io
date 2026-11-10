@@ -150,6 +150,69 @@
         color: var(--accent-color);
       }
 
+      /* Hero NexCam additions */
+      .nexcam-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: color-mix(in srgb, var(--accent-color), transparent 85%);
+        color: var(--accent-color);
+        border: 1px solid color-mix(in srgb, var(--accent-color), transparent 60%);
+        border-radius: 50px;
+        padding: 6px 18px;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+      }
+      .hero-code-badge {
+        position: absolute;
+        bottom: -10px;
+        right: -10px;
+        background: color-mix(in srgb, #161b22, transparent 10%);
+        border: 1px solid color-mix(in srgb, var(--accent-color), transparent 60%);
+        border-radius: 10px;
+        padding: 14px 18px;
+        font-family: 'Courier New', monospace;
+        font-size: 13px;
+        line-height: 2;
+        min-width: 240px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+        z-index: 2;
+      }
+      .code-line { display: block; }
+      .code-cursor {
+        color: var(--accent-color);
+        animation: blink 1s step-end infinite;
+      }
+      @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+      .hero-stats-strip {
+        display: flex;
+        gap: 24px;
+        margin: 20px 0 16px;
+        flex-wrap: wrap;
+      }
+      .hero-stat-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 52px;
+      }
+      .hero-stat-num {
+        font-size: 22px;
+        font-weight: 800;
+        color: var(--accent-color);
+        line-height: 1.1;
+      }
+      .hero-stat-label {
+        font-size: 11px;
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-top: 2px;
+      }
+
       /* Trust Section */
       .trust-item {
         padding: 32px 20px;
@@ -653,6 +716,9 @@
             <div class="row align-items-center">
               <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
                 <div class="hero-text">
+                  <div class="nexcam-badge" data-aos="fade-down" data-aos-delay="50">
+                    <i class="bi bi-cpu-fill"></i> NexCam · Tech Solutions
+                  </div>
                   <h1>Cristian<span class="accent-text">Camacho</span></h1>
                   <h2>Desarrollador Full Stack & DevSecOps</h2>
                   <p class="lead">
@@ -683,17 +749,36 @@
                     >
                   </div>
 
+                  <div class="hero-stats-strip">
+                    <div class="hero-stat-item">
+                      <span class="hero-stat-num">4+</span>
+                      <span class="hero-stat-label">Años</span>
+                    </div>
+                    <div class="hero-stat-item">
+                      <span class="hero-stat-num">15+</span>
+                      <span class="hero-stat-label">Proyectos</span>
+                    </div>
+                    <div class="hero-stat-item">
+                      <span class="hero-stat-num">3</span>
+                      <span class="hero-stat-label">Fin. Sector</span>
+                    </div>
+                    <div class="hero-stat-item">
+                      <span class="hero-stat-num">PCI</span>
+                      <span class="hero-stat-label">DSS</span>
+                    </div>
+                  </div>
+
                   <div class="social-links">
-                    <a href="https://wa.me/573148917721"
+                    <a href="https://wa.me/573148917721" rel="noopener noreferrer"
                       ><i class="bi bi-phone"></i
                     ></a>
                     <a href="mailto:rfcamacris@gmail.com"
                       ><i class="bi bi-envelope"></i
                     ></a>
-                    <a href="https://github.com/CamachoLives/"
+                    <a href="https://github.com/CamachoLives/" target="_blank" rel="noopener noreferrer"
                       ><i class="bi bi-github"></i
                     ></a>
-                    <a href="https://www.linkedin.com/in/cristiancamacho2004/"
+                    <a href="https://www.linkedin.com/in/cristiancamacho2004/" target="_blank" rel="noopener noreferrer"
                       ><i class="bi bi-linkedin"></i
                     ></a>
                   </div>
@@ -706,9 +791,15 @@
                     <div class="profile-background"></div>
                     <img
                       src="assets/img/profile/Me.jpeg"
-                      alt="Cristian Camacho"
+                      alt="Cristian Camacho – Full Stack Developer & DevSecOps"
                       class="profile-image"
+                      loading="lazy"
                     />
+                  </div>
+                  <div class="hero-code-badge">
+                    <span class="code-line"><span style="color:#79b8ff">const</span> <span style="color:#9ecbff">dev</span> = <span style="color:#79b8ff">new</span> NexCam();</span>
+                    <span class="code-line"><span style="color:#9ecbff">dev</span>.<span style="color:#b392f0">build</span>(<span style="color:#9ecbff">tu_proyecto</span>);</span>
+                    <span class="code-line code-cursor">▌</span>
                   </div>
                 </div>
               </div>
