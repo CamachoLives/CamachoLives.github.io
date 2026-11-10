@@ -150,6 +150,98 @@
         color: var(--accent-color);
       }
 
+      /* AI Solutions Section */
+      .ai-solution-card {
+        background: color-mix(in srgb, var(--surface-color), transparent 30%);
+        border: 1px solid color-mix(in srgb, var(--accent-color), transparent 80%);
+        border-radius: 16px;
+        padding: 36px 28px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.35s ease;
+      }
+      .ai-solution-card:hover {
+        border-color: var(--accent-color);
+        box-shadow: 0 0 32px color-mix(in srgb, var(--accent-color), transparent 60%);
+        transform: translateY(-6px);
+      }
+      .ai-solution-card.featured {
+        border-color: var(--accent-color);
+        box-shadow: 0 0 24px color-mix(in srgb, var(--accent-color), transparent 70%);
+      }
+      .ai-card-badge {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        background: var(--accent-color);
+        color: var(--contrast-color);
+        font-size: 11px;
+        font-weight: 700;
+        padding: 4px 12px;
+        border-radius: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .ai-card-icon {
+        font-size: 42px;
+        color: var(--accent-color);
+        margin-bottom: 20px;
+        line-height: 1;
+      }
+      .ai-solution-card h3 {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--heading-color);
+        margin-bottom: 14px;
+      }
+      .ai-solution-card p {
+        color: color-mix(in srgb, var(--default-color), transparent 20%);
+        font-size: 15px;
+        line-height: 1.65;
+        flex-grow: 1;
+      }
+      .ai-features {
+        list-style: none;
+        padding: 0;
+        margin: 16px 0 24px;
+      }
+      .ai-features li {
+        font-size: 14px;
+        color: color-mix(in srgb, var(--default-color), transparent 10%);
+        padding: 4px 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .ai-features li i {
+        color: var(--accent-color);
+        font-size: 15px;
+        flex-shrink: 0;
+      }
+      .ai-cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #25d366;
+        color: #fff;
+        border-radius: 50px;
+        padding: 10px 22px;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        margin-top: auto;
+        transition: all 0.3s ease;
+        width: fit-content;
+      }
+      .ai-cta-btn:hover {
+        background: #1db954;
+        color: #fff;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+      }
+
       /* Floating WhatsApp Button */
       .floating-whatsapp {
         position: fixed;
@@ -593,6 +685,71 @@
         </div>
       </section> -->
       <!-- /Stats Section -->
+
+      <!-- AI Solutions Section -->
+      <section id="ai-solutions" class="ai-solutions section light-background">
+        <div class="container section-title" data-aos="fade-up">
+          <h2>IA & Soluciones Tecnológicas</h2>
+          <p>Automatiza, optimiza y escala con Inteligencia Artificial integrada a tu negocio</p>
+        </div>
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row gy-4 justify-content-center">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="ai-solution-card h-100">
+                <div class="ai-card-icon">
+                  <i class="bi bi-robot"></i>
+                </div>
+                <h3>Automatización Inteligente con IA</h3>
+                <p>Bots y agentes que automatizan tareas repetitivas, análisis de datos y flujos de aprobación. Integración con OpenAI, Claude API y Langchain sobre tus sistemas actuales.</p>
+                <ul class="ai-features">
+                  <li><i class="bi bi-check-circle-fill"></i> Agentes autónomos con LLMs</li>
+                  <li><i class="bi bi-check-circle-fill"></i> RPA con Python</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Integración con OpenAI / Claude</li>
+                </ul>
+                <a href="https://wa.me/573148917721?text=Hola%20Cristian%2C%20quiero%20automatizar%20procesos%20con%20IA" class="ai-cta-btn" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-whatsapp"></i> Cotizar ahora
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="ai-solution-card featured h-100">
+                <div class="ai-card-badge">Más Solicitado</div>
+                <div class="ai-card-icon">
+                  <i class="bi bi-chat-dots"></i>
+                </div>
+                <h3>Chatbots & Asistentes Virtuales</h3>
+                <p>Asistentes conversacionales para atención al cliente, soporte técnico o guía de ventas, integrados a WhatsApp, web o tu app. Disponibles 24/7.</p>
+                <ul class="ai-features">
+                  <li><i class="bi bi-check-circle-fill"></i> Integración con WhatsApp Business</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Respuestas personalizadas con LLM</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Panel de administración</li>
+                </ul>
+                <a href="https://wa.me/573148917721?text=Hola%20Cristian%2C%20quiero%20un%20chatbot%20con%20IA" class="ai-cta-btn" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-whatsapp"></i> Cotizar ahora
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="ai-solution-card h-100">
+                <div class="ai-card-icon">
+                  <i class="bi bi-graph-up-arrow"></i>
+                </div>
+                <h3>Integración IA en Sistemas Existentes</h3>
+                <p>Conecta tu plataforma actual con modelos de lenguaje (LLM), generación de reportes inteligentes y análisis predictivo. Sin reemplazar lo que ya tienes.</p>
+                <ul class="ai-features">
+                  <li><i class="bi bi-check-circle-fill"></i> APIs de IA sobre tu backend</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Análisis predictivo con ML</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Reportes inteligentes automatizados</li>
+                </ul>
+                <a href="https://wa.me/573148917721?text=Hola%20Cristian%2C%20quiero%20integrar%20IA%20en%20mi%20sistema%20existente" class="ai-cta-btn" target="_blank" rel="noopener noreferrer">
+                  <i class="bi bi-whatsapp"></i> Cotizar ahora
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /AI Solutions Section -->
 
       <!-- Services Section -->
       <section id="services" class="services section">
