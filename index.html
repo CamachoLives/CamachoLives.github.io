@@ -665,6 +665,41 @@
         0%, 100% { box-shadow: 0 4px 16px rgba(37, 211, 102, 0.5); }
         50% { box-shadow: 0 4px 32px rgba(37, 211, 102, 0.9), 0 0 0 10px rgba(37, 211, 102, 0.1); }
       }
+
+      /* Glow border animation for featured cards */
+      @keyframes glow-border {
+        0%, 100% { box-shadow: 0 0 10px color-mix(in srgb, var(--accent-color), transparent 70%); }
+        50% { box-shadow: 0 0 24px color-mix(in srgb, var(--accent-color), transparent 40%), 0 0 48px color-mix(in srgb, var(--accent-color), transparent 80%); }
+      }
+      .pricing-card.featured {
+        animation: glow-border 3s ease-in-out infinite;
+      }
+
+      /* Service card CTA link styling */
+      .service-card .card-action a {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--accent-color);
+        text-decoration: none;
+        transition: gap 0.2s ease;
+      }
+      .service-card .card-action a:hover {
+        gap: 10px;
+      }
+
+      /* Smooth scroll */
+      html { scroll-behavior: smooth; }
+
+      /* Mobile tweaks for new sections */
+      @media (max-width: 768px) {
+        .hero-code-badge { display: none; }
+        .hero-stats-strip { gap: 16px; }
+        .pricing-card.featured { transform: none; }
+        .nexcam-badge { font-size: 11px; padding: 4px 14px; }
+      }
     </style>
   </head>
 
