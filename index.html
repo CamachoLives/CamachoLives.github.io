@@ -150,6 +150,82 @@
         color: var(--accent-color);
       }
 
+      /* NexCam Footer */
+      .footer-brand-name {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--accent-color);
+        margin-bottom: 4px;
+      }
+      .footer-brand-tagline {
+        font-size: 13px;
+        font-weight: 600;
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+      }
+      .footer-brand-desc {
+        font-size: 14px;
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+        line-height: 1.6;
+        margin-bottom: 16px;
+      }
+      .footer-social {
+        display: flex;
+        gap: 14px;
+      }
+      .footer-social a {
+        font-size: 20px;
+        color: color-mix(in srgb, var(--default-color), transparent 40%);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .footer-social a:hover { color: var(--accent-color); }
+      .footer-nav-title {
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--heading-color);
+        margin-bottom: 14px;
+      }
+      .footer-nav-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .footer-nav-list li { margin-bottom: 8px; }
+      .footer-nav-list a {
+        font-size: 14px;
+        color: color-mix(in srgb, var(--default-color), transparent 30%);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .footer-nav-list a:hover { color: var(--accent-color); }
+      .footer-wa-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #25d366;
+        color: #fff;
+        padding: 11px 22px;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      .footer-wa-btn:hover {
+        background: #1db954;
+        color: #fff;
+        transform: translateY(-2px);
+      }
+      .footer-divider {
+        height: 1px;
+        background: color-mix(in srgb, var(--default-color), transparent 88%);
+        margin: 24px 0 20px;
+      }
+      .footer-top { padding-top: 40px; }
+
       /* Impact Counters */
       .impact-counter {
         padding: 28px 16px;
@@ -2428,18 +2504,48 @@
 
     <footer id="footer" class="footer position-relative">
       <div class="container">
+        <div class="footer-top row gy-4 justify-content-between align-items-start mb-4">
+          <div class="col-lg-4">
+            <div class="footer-brand">
+              <h3 class="footer-brand-name"><i class="bi bi-cpu-fill me-2"></i>NexCam</h3>
+              <p class="footer-brand-tagline">Desarrollo · DevSecOps · IA</p>
+              <p class="footer-brand-desc">Soluciones tecnológicas de alto impacto para empresas que quieren crecer con seguridad y eficiencia.</p>
+              <div class="footer-social">
+                <a href="https://github.com/CamachoLives" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/cristiancamacho2004/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="https://wa.me/573148917721" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                <a href="mailto:rfcamacris@gmail.com" title="Email"><i class="bi bi-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <h4 class="footer-nav-title">Navegación</h4>
+            <ul class="footer-nav-list">
+              <li><a href="#hero">Inicio</a></li>
+              <li><a href="#about">Sobre mí</a></li>
+              <li><a href="#ai-solutions">IA & Soluciones</a></li>
+              <li><a href="#services">Servicios</a></li>
+              <li><a href="#portfolio">Proyectos</a></li>
+              <li><a href="#pricing">Precios</a></li>
+              <li><a href="#contact">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h4 class="footer-nav-title">¿Tienes un proyecto?</h4>
+            <p style="font-size:14px; color: color-mix(in srgb, var(--default-color), transparent 25%); margin-bottom: 16px;">Escríbeme directamente y te respondo en menos de 24h.</p>
+            <a href="https://wa.me/573148917721?text=Hola%20Cristian%2C%20quiero%20cotizar%20un%20proyecto" class="footer-wa-btn" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-whatsapp"></i> Iniciar conversación
+            </a>
+          </div>
+        </div>
+        <div class="footer-divider"></div>
         <div class="copyright text-center">
           <p>
-            © <span>Copyright</span>
-            <strong class="px-1 sitename">Cristian Camacho</strong>
-            <span>Todos los derechos reservados</span>
+            © 2025 <strong class="px-1">NexCam</strong> – Cristian Alexander Camacho Pira. Bogotá, Colombia. Todos los derechos reservados.
           </p>
         </div>
         <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          Diseñado y desarrollado por Cristian Camacho
+          Diseñado y desarrollado por Cristian Camacho | NexCam
         </div>
       </div>
     </footer>
