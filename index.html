@@ -150,6 +150,23 @@
         color: var(--accent-color);
       }
 
+      /* Nav Brand */
+      .nav-brand-top {
+        padding: 20px 16px 10px;
+        width: 100%;
+        border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+        margin-bottom: 8px;
+      }
+      .nav-brand-name {
+        font-size: 20px;
+        font-weight: 800;
+        color: var(--accent-color);
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
       /* NexCam Footer */
       .footer-brand-name {
         font-size: 24px;
@@ -787,6 +804,9 @@
       <i class="header-toggle d-xl-none bi bi-list"></i>
 
       <div class="header-container d-flex flex-column align-items-start">
+        <div class="nav-brand-top">
+          <span class="nav-brand-name"><i class="bi bi-cpu-fill"></i> NexCam</span>
+        </div>
         <nav id="navmenu" class="navmenu">
           <ul>
             <li>
@@ -825,6 +845,11 @@
             <li>
               <a href="#skills"
                 ><i class="bi bi-hdd-stack navicon"></i> Habilidades</a
+              >
+            </li>
+            <li>
+              <a href="#proceso"
+                ><i class="bi bi-diagram-3 navicon"></i> Proceso</a
               >
             </li>
             <li>
@@ -969,8 +994,9 @@
                   <div class="profile-image">
                     <img
                       src="assets/img/profile/cc.jpg"
-                      alt="Profile Image"
+                      alt="Cristian Camacho – NexCam"
                       class="img-fluid"
+                      loading="lazy"
                     />
                   </div>
                   <div class="profile-badge">
