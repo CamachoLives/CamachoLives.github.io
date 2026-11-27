@@ -551,12 +551,6 @@
         border-radius: 8px;
         position: relative;
       }
-      .mechanicsoft-bg {
-        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
-      }
-      .movig-bg {
-        background: linear-gradient(135deg, #0d1117 0%, #1c2333 40%, #0d2137 100%);
-      }
       .fallback-label {
         font-size: 32px;
         font-weight: 800;
@@ -876,6 +870,10 @@
       }
       .app-live .pulse { width: 8px; height: 8px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 0 0 rgba(74,222,128,.7); animation: appPulse 1.8s infinite; }
       @keyframes appPulse { 70% { box-shadow: 0 0 0 8px rgba(74,222,128,0); } 100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); } }
+      .app-badge {
+        display: inline-flex; align-items: center; gap: 6px; padding: 3px 11px; border-radius: 30px; font-size: 12px; font-weight: 600;
+        color: color-mix(in srgb, var(--default-color), transparent 25%); background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.15);
+      }
       .app-cat { font-size: 13px; color: var(--app-color); font-weight: 600; text-transform: uppercase; letter-spacing: .8px; }
       .app-body h3 {
         font-size: 26px; font-weight: 800; margin-bottom: 8px;
@@ -931,13 +929,8 @@
               >
             </li>
             <li>
-              <a href="#apps"
-                ><i class="bi bi-rocket-takeoff navicon"></i> Apps en vivo</a
-              >
-            </li>
-            <li>
               <a href="#portfolio"
-                ><i class="bi bi-images navicon"></i> Proyectos</a
+                ><i class="bi bi-rocket-takeoff navicon"></i> Proyectos</a
               >
             </li>
             <li>
@@ -1616,28 +1609,31 @@
       </section>
       <!-- /Services Section -->
 
-      <!-- Apps en Producción (Catálogo) -->
-      <section id="apps" class="apps-showcase section">
+      <!-- Proyectos (catálogo unificado) -->
+      <section id="portfolio" class="apps-showcase section">
         <div class="container section-title" data-aos="fade-up">
-          <h2>Apps en Producción</h2>
+          <h2>Proyectos</h2>
           <p>
-            Productos que construí de punta a punta y que están funcionando
-            ahora mismo en Cloudflare. Ábrelos y pruébalos tú mismo.
+            Productos que construí de punta a punta. Los que dicen
+            «En línea» están funcionando ahora mismo en Cloudflare: ábrelos y
+            pruébalos tú mismo.
           </p>
         </div>
 
         <div class="container">
           <div class="apps-filters" data-aos="fade-up" data-aos-delay="50">
             <button class="apps-filter active" data-filter="*">Todos</button>
+            <button class="apps-filter" data-filter="live">En línea</button>
             <button class="apps-filter" data-filter="reservas">Reservas</button>
             <button class="apps-filter" data-filter="gestion">Gestión</button>
             <button class="apps-filter" data-filter="civic">Votación</button>
             <button class="apps-filter" data-filter="web">Sitios web</button>
+            <button class="apps-filter" data-filter="seguridad">Ciberseguridad</button>
           </div>
 
           <div class="row gy-5">
             <!-- BalonCam -->
-            <div class="col-lg-6 app-item" data-cat="reservas" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-6 app-item" data-cat="reservas live" data-aos="fade-up" data-aos-delay="100">
               <article class="app-card" style="--app-color: #22c55e; --app-color-2: #0ea5e9">
                 <a class="app-browser" href="https://baloncam.rfcamacris.workers.dev/" target="_blank" rel="noopener noreferrer" aria-label="Abrir BalonCam en vivo">
                   <div class="app-browser-bar">
@@ -1646,7 +1642,7 @@
                   </div>
                   <div class="app-shot">
                     <div class="app-shot-fallback"><i class="bi bi-dribbble"></i><span>BalonCam</span></div>
-                    <img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fbaloncam.rfcamacris.workers.dev%2F?w=1200&h=750" alt="Vista de BalonCam, reserva de canchas" loading="lazy" onerror="this.remove()" />
+                    <img src="https://capturas.rfcamacris.workers.dev/baloncam.webp" alt="Vista de BalonCam, reserva de canchas" loading="lazy" onerror="this.remove()" />
                     <span class="app-open"><i class="bi bi-play-circle-fill"></i> Probar en vivo</span>
                   </div>
                 </a>
@@ -1683,7 +1679,7 @@
             </div>
 
             <!-- MechanicSoft -->
-            <div class="col-lg-6 app-item" data-cat="gestion" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-6 app-item" data-cat="gestion live" data-aos="fade-up" data-aos-delay="200">
               <article class="app-card" style="--app-color: #38bdf8; --app-color-2: #6366f1">
                 <a class="app-browser" href="https://mechanicsoft.rfcamacris.workers.dev/" target="_blank" rel="noopener noreferrer" aria-label="Abrir MechanicSoft en vivo">
                   <div class="app-browser-bar">
@@ -1692,7 +1688,7 @@
                   </div>
                   <div class="app-shot">
                     <div class="app-shot-fallback"><i class="bi bi-tools"></i><span>MechanicSoft</span></div>
-                    <img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fmechanicsoft.rfcamacris.workers.dev%2F?w=1200&h=750" alt="Vista de MechanicSoft, gestión de talleres" loading="lazy" onerror="this.remove()" />
+                    <img src="https://capturas.rfcamacris.workers.dev/mechanicsoft.webp" alt="Vista de MechanicSoft, gestión de talleres" loading="lazy" onerror="this.remove()" />
                     <span class="app-open"><i class="bi bi-play-circle-fill"></i> Probar en vivo</span>
                   </div>
                 </a>
@@ -1730,7 +1726,7 @@
             </div>
 
             <!-- VotaCam -->
-            <div class="col-lg-6 app-item" data-cat="civic" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-6 app-item" data-cat="civic live" data-aos="fade-up" data-aos-delay="100">
               <article class="app-card" style="--app-color: #f59e0b; --app-color-2: #ef4444">
                 <a class="app-browser" href="https://votacam.rfcamacris.workers.dev/" target="_blank" rel="noopener noreferrer" aria-label="Abrir VotaCam en vivo">
                   <div class="app-browser-bar">
@@ -1739,7 +1735,7 @@
                   </div>
                   <div class="app-shot">
                     <div class="app-shot-fallback"><i class="bi bi-check2-square"></i><span>VotaCam</span></div>
-                    <img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fvotacam.rfcamacris.workers.dev%2F?w=1200&h=750" alt="Vista de VotaCam, votación para asambleas" loading="lazy" onerror="this.remove()" />
+                    <img src="https://capturas.rfcamacris.workers.dev/votacam.webp" alt="Vista de VotaCam, votación para asambleas" loading="lazy" onerror="this.remove()" />
                     <span class="app-open"><i class="bi bi-play-circle-fill"></i> Probar en vivo</span>
                   </div>
                 </a>
@@ -1775,7 +1771,7 @@
             </div>
 
             <!-- MOVIG -->
-            <div class="col-lg-6 app-item" data-cat="web" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-6 app-item" data-cat="web live" data-aos="fade-up" data-aos-delay="200">
               <article class="app-card" style="--app-color: #a78bfa; --app-color-2: #06b6d4">
                 <a class="app-browser" href="https://movig.com.co/" target="_blank" rel="noopener noreferrer" aria-label="Abrir movig.com.co">
                   <div class="app-browser-bar">
@@ -1784,7 +1780,7 @@
                   </div>
                   <div class="app-shot">
                     <div class="app-shot-fallback"><i class="bi bi-camera-video"></i><span>MOVIG</span></div>
-                    <img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fmovig.com.co%2F?w=1200&h=750" alt="Vista del sitio web de MOVIG" loading="lazy" onerror="this.remove()" />
+                    <img src="https://capturas.rfcamacris.workers.dev/movig.webp" alt="Vista del sitio web de MOVIG" loading="lazy" onerror="this.remove()" />
                     <span class="app-open"><i class="bi bi-play-circle-fill"></i> Visitar sitio</span>
                   </div>
                 </a>
@@ -1819,119 +1815,101 @@
                 </div>
               </article>
             </div>
-          </div>
-        </div>
-      </section>
-      <!-- /Apps en Producción -->
 
-      <!-- Portfolio Section -->
-      <section id="portfolio" class="portfolio section">
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Proyectos</h2>
-          <p>
-            Casos reales de desarrollo y ciberseguridad, con resultados
-            medibles para el negocio.
-          </p>
-        </div>
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-5">
-            <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="150">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/Camintra.jpg"
-                  class="img-fluid"
-                  alt="Calendario Restrictivo - Intranet Corporativa"
-                  loading="lazy"
-                />
-                <div class="portfolio-info">
-                  <div class="content">
-                    <span class="category">Intranet Corporativa</span>
-                    <h4 class="category">Calendario Restrictivo</h4>
-                    <div class="portfolio-links">
-                      <a
-                        href="assets/img/portfolio/Camintra.jpg"
-                        class="glightbox"
-                        title="Calendario Restrictivo"
-                        ><i class="bi bi-plus-lg"></i
-                      ></a>
-                      <a
-                        href="https://github.com/CamachoLives/CalendarioEmpresarial"
-                        target="_blank"
-                        title="Ver Repositorio en GitHub"
-                        ><i class="bi bi-github"></i
-                      ></a>
-                    </div>
+            <!-- Calendario Restrictivo / Camintra -->
+            <div class="col-lg-6 app-item" data-cat="gestion" data-aos="fade-up" data-aos-delay="100">
+              <article class="app-card" style="--app-color: #f472b6; --app-color-2: #8b5cf6">
+                <a class="app-browser glightbox" href="assets/img/portfolio/Camintra.jpg" aria-label="Ver captura de Camintra">
+                  <div class="app-browser-bar">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    <span class="app-url"><i class="bi bi-building-lock"></i> intranet corporativa</span>
+                  </div>
+                  <div class="app-shot">
+                    <div class="app-shot-fallback"><i class="bi bi-calendar-week"></i><span>Camintra</span></div>
+                    <img src="assets/img/portfolio/Camintra.jpg" alt="Calendario Restrictivo, intranet corporativa" loading="lazy" onerror="this.remove()" />
+                    <span class="app-open"><i class="bi bi-zoom-in"></i> Ver captura</span>
+                  </div>
+                </a>
+                <div class="app-body">
+                  <div class="app-meta">
+                    <span class="app-badge"><i class="bi bi-shield-lock"></i> Uso interno</span>
+                    <span class="app-cat">Intranet corporativa</span>
+                  </div>
+                  <h3>Calendario Restrictivo</h3>
+                  <p>
+                    Plataforma interna para gestionar reuniones, actividades
+                    semanales, recordatorios y clientes, con acceso controlado
+                    por roles.
+                  </p>
+                  <ul class="app-features">
+                    <li><i class="bi bi-check2-circle"></i> Comunicación en tiempo real con WebSockets</li>
+                    <li><i class="bi bi-check2-circle"></i> Permisos por rol para cada módulo</li>
+                    <li><i class="bi bi-check2-circle"></i> Arquitectura de microservicios con API REST</li>
+                  </ul>
+                  <div class="tech-tags">
+                    <span class="tech-tag">Angular</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">WebSockets</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Microservicios</span>
+                  </div>
+                  <div class="app-actions">
+                    <a class="app-btn primary glightbox" href="assets/img/portfolio/Camintra.jpg"><i class="bi bi-image"></i> Ver captura</a>
+                    <a class="app-btn" href="https://github.com/CamachoLives/CalendarioEmpresarial" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> Código</a>
+                    <a class="app-btn ghost" href="https://wa.me/573148917721?text=Hola%20Cristian%2C%20quiero%20una%20intranet%20como%20el%20Calendario%20Restrictivo" target="_blank" rel="noopener noreferrer" title="Quiero algo similar"><i class="bi bi-whatsapp"></i></a>
                   </div>
                 </div>
-              </div>
-              <div class="portfolio-caption">
-                <h4>Calendario Restrictivo – Intranet Corporativa</h4>
-                <p>
-                  Plataforma interna para gestión de reuniones, actividades
-                  semanales, recordatorios y manejo de clientes, con control
-                  de accesos por roles. WebSockets para comunicación
-                  bidireccional en tiempo real, consumo de APIs REST vía
-                  Fetch y arquitectura basada en microservicios.
-                </p>
-                <div class="tech-tags">
-                  <span class="tech-tag">Node.js</span>
-                  <span class="tech-tag">Angular</span>
-                  <span class="tech-tag">WebSockets</span>
-                  <span class="tech-tag">Fetch API</span>
-                  <span class="tech-tag">PostgreSQL</span>
-                  <span class="tech-tag">Microservicios</span>
-                </div>
-              </div>
+              </article>
             </div>
 
-            <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="250">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/wd.webp"
-                  class="img-fluid"
-                  alt="Desinfección y Recuperación de Sitio WordPress"
-                  loading="lazy"
-                />
-                <div class="portfolio-info">
-                  <div class="content">
-                    <span class="category">Ciberseguridad Web</span>
-                    <h4 class="category">Recuperación de Sitio WordPress</h4>
-                    <div class="portfolio-links">
-                      <a
-                        href="assets/img/portfolio/wd.webp"
-                        class="glightbox"
-                        title="Recuperación de Sitio WordPress"
-                        ><i class="bi bi-plus-lg"></i
-                      ></a>
-                      <a href="#contact" title="Quiero algo similar"
-                        ><i class="bi bi-arrow-right"></i
-                      ></a>
-                    </div>
+            <!-- Recuperación WordPress -->
+            <div class="col-lg-6 app-item" data-cat="seguridad" data-aos="fade-up" data-aos-delay="200">
+              <article class="app-card" style="--app-color: #f87171; --app-color-2: #fb923c">
+                <a class="app-browser glightbox" href="assets/img/portfolio/wd.webp" aria-label="Ver captura del caso WordPress">
+                  <div class="app-browser-bar">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    <span class="app-url"><i class="bi bi-bug"></i> sitio del cliente</span>
+                  </div>
+                  <div class="app-shot">
+                    <div class="app-shot-fallback"><i class="bi bi-shield-check"></i><span>WordPress</span></div>
+                    <img src="assets/img/portfolio/wd.webp" alt="Desinfección y recuperación de sitio WordPress" loading="lazy" onerror="this.remove()" />
+                    <span class="app-open"><i class="bi bi-zoom-in"></i> Ver captura</span>
+                  </div>
+                </a>
+                <div class="app-body">
+                  <div class="app-meta">
+                    <span class="app-badge"><i class="bi bi-briefcase"></i> Caso real</span>
+                    <span class="app-cat">Ciberseguridad web</span>
+                  </div>
+                  <h3>Recuperación de Sitio WordPress</h3>
+                  <p>
+                    Análisis y eliminación de código malicioso que publicaba
+                    contenido no autorizado en Google. Se blindó el sitio y se
+                    recuperó todo el posicionamiento SEO.
+                  </p>
+                  <ul class="app-features">
+                    <li><i class="bi bi-check2-circle"></i> Análisis forense y limpieza del código infectado</li>
+                    <li><i class="bi bi-check2-circle"></i> Hardening y actualización de plugins</li>
+                    <li><i class="bi bi-check2-circle"></i> Recuperación del SEO en Search Console</li>
+                  </ul>
+                  <div class="tech-tags">
+                    <span class="tech-tag">WordPress</span>
+                    <span class="tech-tag">PHP</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">Search Console</span>
+                    <span class="tech-tag">Análisis forense</span>
+                  </div>
+                  <div class="app-actions">
+                    <a class="app-btn primary glightbox" href="assets/img/portfolio/wd.webp"><i class="bi bi-image"></i> Ver captura</a>
+                    <a class="app-btn ghost" href="https://wa.me/573148917721?text=Hola%20Cristian%2C%20necesito%20ayuda%20con%20la%20seguridad%20de%20mi%20sitio%20web" target="_blank" rel="noopener noreferrer" title="Necesito ayuda"><i class="bi bi-whatsapp"></i></a>
                   </div>
                 </div>
-              </div>
-              <div class="portfolio-caption">
-                <h4>Desinfección y Recuperación de Sitio WordPress</h4>
-                <p>
-                  Análisis y eliminación de código malicioso que generaba
-                  contenido no autorizado en resultados de búsqueda.
-                  Hardening del sitio, actualización de plugins y recuperación
-                  total del posicionamiento SEO.
-                </p>
-                <div class="tech-tags">
-                  <span class="tech-tag">WordPress</span>
-                  <span class="tech-tag">PHP</span>
-                  <span class="tech-tag">MySQL</span>
-                  <span class="tech-tag">Google Search Console</span>
-                  <span class="tech-tag">Análisis Forense</span>
-                </div>
-              </div>
+              </article>
             </div>
           </div>
         </div>
       </section>
-      <!-- /Portfolio Section -->
+      <!-- /Proyectos -->
 
       <!-- GitHub Repos Section -->
       <section id="github-projects" class="github-section section light-background">
@@ -2782,7 +2760,6 @@
               <li><a href="#about">Sobre mí</a></li>
               <li><a href="#ai-solutions">IA & Soluciones</a></li>
               <li><a href="#services">Servicios</a></li>
-              <li><a href="#apps">Apps en vivo</a></li>
               <li><a href="#portfolio">Proyectos</a></li>
               <li><a href="#pricing">Precios</a></li>
               <li><a href="#contact">Contacto</a></li>
@@ -2898,7 +2875,7 @@
           btn.classList.add("active");
           var f = btn.getAttribute("data-filter");
           document.querySelectorAll(".app-item").forEach(function (item) {
-            item.classList.toggle("is-hidden", f !== "*" && item.getAttribute("data-cat") !== f);
+            item.classList.toggle("is-hidden", f !== "*" && item.getAttribute("data-cat").split(" ").indexOf(f) === -1);
           });
           if (window.AOS) AOS.refresh();
         });
