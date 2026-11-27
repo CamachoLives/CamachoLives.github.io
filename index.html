@@ -3069,5 +3069,19 @@
         });
     })();
     </script>
+      <script>
+      // Filtros del catálogo de apps
+      document.querySelectorAll(".apps-filter").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          document.querySelectorAll(".apps-filter").forEach(function (b) { b.classList.remove("active"); });
+          btn.classList.add("active");
+          var f = btn.getAttribute("data-filter");
+          document.querySelectorAll(".app-item").forEach(function (item) {
+            item.classList.toggle("is-hidden", f !== "*" && item.getAttribute("data-cat").split(" ").indexOf(f) === -1);
+          });
+          if (window.AOS) AOS.refresh();
+        });
+      });
+    </script>
   </body>
 </html>
