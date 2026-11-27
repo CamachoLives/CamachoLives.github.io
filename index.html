@@ -12,6 +12,7 @@
       name="keywords"
       content="NexCam, desarrollador full stack bogota, freelance java spring boot, inteligencia artificial empresas colombia, ciberseguridad devsecops, docker microservicios, automatizacion ia rpa, desarrollo software a medida"
     />
+    <link rel="preconnect" href="https://capturas.rfcamacris.workers.dev" crossorigin />
     <link rel="canonical" href="https://camacholives.github.io/" />
 
     <!-- Open Graph / Social Sharing -->
@@ -551,12 +552,6 @@
         border-radius: 8px;
         position: relative;
       }
-      .mechanicsoft-bg {
-        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
-      }
-      .movig-bg {
-        background: linear-gradient(135deg, #0d1117 0%, #1c2333 40%, #0d2137 100%);
-      }
       .fallback-label {
         font-size: 32px;
         font-weight: 800;
@@ -814,6 +809,95 @@
         .pricing-card.featured { transform: none; }
         .nexcam-badge { font-size: 11px; padding: 4px 14px; }
       }
+
+      /* ===== Apps en Producción (catálogo) ===== */
+      .apps-filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 40px; }
+      .apps-filter {
+        background: transparent; color: color-mix(in srgb, var(--default-color), transparent 30%);
+        border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+        padding: 7px 18px; border-radius: 30px; font-size: 14px; font-weight: 500; transition: all .25s;
+      }
+      .apps-filter:hover, .apps-filter.active { color: #111; background: var(--accent-color); border-color: var(--accent-color); }
+      .app-item.is-hidden { display: none; }
+      .app-card {
+        --app-color: #38bdf8; --app-color-2: #6366f1;
+        position: relative; height: 100%; display: flex; flex-direction: column;
+        background: color-mix(in srgb, var(--surface-color), transparent 10%);
+        border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+        border-radius: 18px; overflow: hidden; transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+      }
+      .app-card::before {
+        content: ""; position: absolute; inset: 0 0 auto 0; height: 3px;
+        background: linear-gradient(90deg, var(--app-color), var(--app-color-2));
+      }
+      .app-card:hover {
+        transform: translateY(-6px);
+        border-color: color-mix(in srgb, var(--app-color), transparent 50%);
+        box-shadow: 0 18px 50px -12px color-mix(in srgb, var(--app-color), transparent 55%);
+      }
+      .app-browser { display: block; margin: 18px 18px 0; border-radius: 12px; overflow: hidden; background: #0b0f17; border: 1px solid rgba(255,255,255,.08); text-decoration: none; }
+      .app-browser-bar { display: flex; align-items: center; gap: 6px; padding: 9px 12px; background: #151a24; }
+      .app-browser-bar .dot { width: 10px; height: 10px; border-radius: 50%; background: #ff5f57; }
+      .app-browser-bar .dot:nth-child(2) { background: #febc2e; }
+      .app-browser-bar .dot:nth-child(3) { background: #28c840; }
+      .app-url {
+        flex: 1; margin-left: 8px; padding: 3px 10px; border-radius: 6px; background: rgba(255,255,255,.06);
+        color: rgba(255,255,255,.6); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      }
+      .app-url i { color: #28c840; font-size: 10px; }
+      .app-shot { position: relative; aspect-ratio: 16 / 10; overflow: hidden; }
+      .app-shot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 6s ease; }
+      .app-card:hover .app-shot img { transform: translateY(-4%) scale(1.03); }
+      .app-shot-fallback {
+        position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+        background: radial-gradient(circle at 30% 20%, color-mix(in srgb, var(--app-color), transparent 55%), transparent 60%),
+                    radial-gradient(circle at 80% 90%, color-mix(in srgb, var(--app-color-2), transparent 55%), transparent 60%), #0b0f17;
+        color: #fff;
+      }
+      .app-shot-fallback i { font-size: 56px; opacity: .9; }
+      .app-shot-fallback span { font-size: 26px; font-weight: 800; letter-spacing: 2px; }
+      .app-open {
+        position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 8px;
+        background: rgba(5, 8, 14, .55); color: #fff; font-weight: 700; font-size: 18px; opacity: 0; transition: opacity .3s;
+        backdrop-filter: blur(2px);
+      }
+      .app-open i { font-size: 28px; color: var(--app-color); }
+      .app-browser:hover .app-open, .app-browser:focus-visible .app-open { opacity: 1; }
+      .app-body { padding: 22px 24px 26px; display: flex; flex-direction: column; flex: 1; }
+      .app-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 10px; }
+      .app-live {
+        display: inline-flex; align-items: center; gap: 7px; padding: 3px 11px; border-radius: 30px; font-size: 12px; font-weight: 600;
+        color: #4ade80; background: rgba(74, 222, 128, .1); border: 1px solid rgba(74, 222, 128, .3);
+      }
+      .app-live .pulse { width: 8px; height: 8px; border-radius: 50%; background: #4ade80; box-shadow: 0 0 0 0 rgba(74,222,128,.7); animation: appPulse 1.8s infinite; }
+      @keyframes appPulse { 70% { box-shadow: 0 0 0 8px rgba(74,222,128,0); } 100% { box-shadow: 0 0 0 0 rgba(74,222,128,0); } }
+      .app-badge {
+        display: inline-flex; align-items: center; gap: 6px; padding: 3px 11px; border-radius: 30px; font-size: 12px; font-weight: 600;
+        color: color-mix(in srgb, var(--default-color), transparent 25%); background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.15);
+      }
+      .app-cat { font-size: 13px; color: var(--app-color); font-weight: 600; text-transform: uppercase; letter-spacing: .8px; }
+      .app-body h3 {
+        font-size: 26px; font-weight: 800; margin-bottom: 8px;
+        background: linear-gradient(90deg, #fff, var(--app-color)); -webkit-background-clip: text; background-clip: text; color: transparent;
+      }
+      .app-body p { color: color-mix(in srgb, var(--default-color), transparent 20%); margin-bottom: 14px; }
+      .app-features { list-style: none; padding: 0; margin: 0 0 16px; }
+      .app-features li { display: flex; gap: 8px; align-items: flex-start; font-size: 14.5px; margin-bottom: 6px; color: color-mix(in srgb, var(--default-color), transparent 10%); }
+      .app-features i { color: var(--app-color); margin-top: 2px; }
+      .app-card .tech-tags { margin-bottom: 20px; }
+      .app-actions { margin-top: auto; display: flex; flex-wrap: wrap; gap: 10px; }
+      .app-btn {
+        display: inline-flex; align-items: center; gap: 7px; padding: 9px 18px; border-radius: 10px; font-size: 14px; font-weight: 600;
+        color: var(--default-color); border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%); text-decoration: none; transition: all .25s;
+      }
+      .app-btn:hover { border-color: var(--app-color); color: var(--app-color); }
+      .app-btn.primary { color: #0b0f17; border: none; background: linear-gradient(90deg, var(--app-color), var(--app-color-2)); }
+      .app-btn.primary:hover { color: #0b0f17; filter: brightness(1.1); transform: translateY(-1px); }
+      .app-btn.ghost { padding: 9px 13px; color: #25d366; }
+      @media (prefers-reduced-motion: reduce) { .app-card, .app-shot img, .app-live .pulse { transition: none; animation: none; } }
+      .app-browser:focus-visible, .app-btn:focus-visible, .apps-filter:focus-visible {
+        outline: 2px solid var(--app-color, var(--accent-color)); outline-offset: 3px;
+      }
     </style>
   </head>
 
@@ -850,7 +934,7 @@
             </li>
             <li>
               <a href="#portfolio"
-                ><i class="bi bi-images navicon"></i> Proyectos</a
+                ><i class="bi bi-rocket-takeoff navicon"></i> Proyectos</a
               >
             </li>
             <li>
@@ -1529,206 +1613,302 @@
       </section>
       <!-- /Services Section -->
 
-      <!-- Portfolio Section -->
-      <section id="portfolio" class="portfolio section">
+      <!-- Proyectos (catálogo unificado) -->
+      <section id="portfolio" class="apps-showcase section">
         <div class="container section-title" data-aos="fade-up">
           <h2>Proyectos</h2>
           <p>
-            Casos reales de desarrollo y ciberseguridad, con resultados
-            medibles para el negocio.
+            Productos que construí de punta a punta. Los que dicen
+            «En línea» están funcionando ahora mismo en Cloudflare: ábrelos y
+            pruébalos tú mismo.
           </p>
         </div>
 
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="container">
+          <div class="apps-filters" data-aos="fade-up" data-aos-delay="50">
+            <button class="apps-filter active" data-filter="*">Todos</button>
+            <button class="apps-filter" data-filter="live">En línea</button>
+            <button class="apps-filter" data-filter="reservas">Reservas</button>
+            <button class="apps-filter" data-filter="gestion">Gestión</button>
+            <button class="apps-filter" data-filter="civic">Votación</button>
+            <button class="apps-filter" data-filter="web">Sitios web</button>
+            <button class="apps-filter" data-filter="seguridad">Ciberseguridad</button>
+          </div>
+
           <div class="row gy-5">
-            <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="150">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/Camintra.jpg"
-                  class="img-fluid"
-                  alt="Calendario Restrictivo - Intranet Corporativa"
-                  loading="lazy"
-                />
-                <div class="portfolio-info">
-                  <div class="content">
-                    <span class="category">Intranet Corporativa</span>
-                    <h4 class="category">Calendario Restrictivo</h4>
-                    <div class="portfolio-links">
-                      <a
-                        href="assets/img/portfolio/Camintra.jpg"
-                        class="glightbox"
-                        title="Calendario Restrictivo"
-                        ><i class="bi bi-plus-lg"></i
-                      ></a>
-                      <a
-                        href="https://github.com/CamachoLives/CalendarioEmpresarial"
-                        target="_blank"
-                        title="Ver Repositorio en GitHub"
-                        ><i class="bi bi-github"></i
-                      ></a>
-                    </div>
+            <!-- BalonCam -->
+            <div class="col-lg-6 app-item" data-cat="reservas live" data-aos="fade-up" data-aos-delay="100">
+              <article class="app-card" style="--app-color: #22c55e; --app-color-2: #0ea5e9">
+                <a class="app-browser" href="https://baloncam.rfcamacris.workers.dev/" target="_blank" rel="noopener noreferrer" aria-label="Abrir BalonCam en vivo">
+                  <div class="app-browser-bar">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    <span class="app-url"><i class="bi bi-lock-fill"></i> baloncam.rfcamacris.workers.dev</span>
+                  </div>
+                  <div class="app-shot">
+                    <div class="app-shot-fallback"><i class="bi bi-dribbble"></i><span>BalonCam</span></div>
+                    <img src="https://capturas.rfcamacris.workers.dev/baloncam.webp" alt="Vista de BalonCam, reserva de canchas" loading="lazy" decoding="async" onerror="this.remove()" />
+                    <span class="app-open"><i class="bi bi-play-circle-fill"></i> Probar en vivo</span>
+                  </div>
+                </a>
+                <div class="app-body">
+                  <div class="app-meta">
+                    <span class="app-live"><span class="pulse"></span> En línea</span>
+                    <span class="app-cat">Reservas deportivas</span>
+                  </div>
+                  <h3>BalonCam</h3>
+                  <p>
+                    Reserva de canchas sintéticas en línea, sin llamadas: el
+                    jugador ve la disponibilidad del día, escoge su horario y
+                    confirma en segundos.
+                  </p>
+                  <ul class="app-features">
+                    <li><i class="bi bi-check2-circle"></i> Disponibilidad en tiempo real por colores</li>
+                    <li><i class="bi bi-check2-circle"></i> Cancha de fútbol 11 divisible en 3 de fútbol 5</li>
+                    <li><i class="bi bi-check2-circle"></i> Bloqueo temporal con token para evitar reservas dobles</li>
+                  </ul>
+                  <div class="tech-tags">
+                    <span class="tech-tag">Angular 17</span>
+                    <span class="tech-tag">TailwindCSS</span>
+                    <span class="tech-tag">Spring Boot 3</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Cloudflare</span>
+                  </div>
+                  <div class="app-actions">
+                    <a class="app-btn primary" href="https://baloncam.rfcamacris.workers.dev/" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> Ver demo</a>
+                    <a class="app-btn ghost" href="https://wa.me/573148917721?text=Hola%20Cristian%2C%20quiero%20un%20sistema%20de%20reservas%20como%20BalonCam" target="_blank" rel="noopener noreferrer" title="Quiero algo similar"><i class="bi bi-whatsapp"></i></a>
                   </div>
                 </div>
-              </div>
-              <div class="portfolio-caption">
-                <h4>Calendario Restrictivo – Intranet Corporativa</h4>
-                <p>
-                  Plataforma interna para gestión de reuniones, actividades
-                  semanales, recordatorios y manejo de clientes, con control
-                  de accesos por roles. WebSockets para comunicación
-                  bidireccional en tiempo real, consumo de APIs REST vía
-                  Fetch y arquitectura basada en microservicios.
-                </p>
-                <div class="tech-tags">
-                  <span class="tech-tag">Node.js</span>
-                  <span class="tech-tag">Angular</span>
-                  <span class="tech-tag">WebSockets</span>
-                  <span class="tech-tag">Fetch API</span>
-                  <span class="tech-tag">PostgreSQL</span>
-                  <span class="tech-tag">Microservicios</span>
-                </div>
-              </div>
+              </article>
             </div>
 
-            <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="250">
-              <div class="portfolio-wrap">
-                <img
-                  src="assets/img/portfolio/wd.webp"
-                  class="img-fluid"
-                  alt="Desinfección y Recuperación de Sitio WordPress"
-                  loading="lazy"
-                />
-                <div class="portfolio-info">
-                  <div class="content">
-                    <span class="category">Ciberseguridad Web</span>
-                    <h4 class="category">Recuperación de Sitio WordPress</h4>
-                    <div class="portfolio-links">
-                      <a
-                        href="assets/img/portfolio/wd.webp"
-                        class="glightbox"
-                        title="Recuperación de Sitio WordPress"
-                        ><i class="bi bi-plus-lg"></i
-                      ></a>
-                      <a href="#contact" title="Quiero algo similar"
-                        ><i class="bi bi-arrow-right"></i
-                      ></a>
-                    </div>
+            <!-- MechanicSoft -->
+            <div class="col-lg-6 app-item" data-cat="gestion live" data-aos="fade-up" data-aos-delay="200">
+              <article class="app-card" style="--app-color: #38bdf8; --app-color-2: #6366f1">
+                <a class="app-browser" href="https://mechanicsoft.rfcamacris.workers.dev/" target="_blank" rel="noopener noreferrer" aria-label="Abrir MechanicSoft en vivo">
+                  <div class="app-browser-bar">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    <span class="app-url"><i class="bi bi-lock-fill"></i> mechanicsoft.rfcamacris.workers.dev</span>
+                  </div>
+                  <div class="app-shot">
+                    <div class="app-shot-fallback"><i class="bi bi-tools"></i><span>MechanicSoft</span></div>
+                    <img src="https://capturas.rfcamacris.workers.dev/mechanicsoft.webp" alt="Vista de MechanicSoft, gestión de talleres" loading="lazy" decoding="async" onerror="this.remove()" />
+                    <span class="app-open"><i class="bi bi-play-circle-fill"></i> Probar en vivo</span>
+                  </div>
+                </a>
+                <div class="app-body">
+                  <div class="app-meta">
+                    <span class="app-live"><span class="pulse"></span> En línea</span>
+                    <span class="app-cat">Gestión de talleres</span>
+                  </div>
+                  <h3>MechanicSoft</h3>
+                  <p>
+                    Sistema para talleres de motos: desde que la moto entra
+                    hasta que se entrega. El cliente consulta el estado de su
+                    vehículo con su documento y placa, sin llamar al taller.
+                  </p>
+                  <ul class="app-features">
+                    <li><i class="bi bi-check2-circle"></i> Órdenes de servicio, clientes y vehículos</li>
+                    <li><i class="bi bi-check2-circle"></i> Repuestos, inventario y pagos</li>
+                    <li><i class="bi bi-check2-circle"></i> Control de acceso por roles y grupos</li>
+                  </ul>
+                  <div class="tech-tags">
+                    <span class="tech-tag">React 19 + Vite</span>
+                    <span class="tech-tag">Java 17</span>
+                    <span class="tech-tag">Spring Boot 3</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Cloudflare</span>
+                  </div>
+                  <div class="app-actions">
+                    <a class="app-btn primary" href="https://mechanicsoft.rfcamacris.workers.dev/" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> Ver demo</a>
+                    <a class="app-btn ghost" href="https://wa.me/573148917721?text=Hola%20Cristian%2C%20quiero%20algo%20similar%20a%20MechanicSoft" target="_blank" rel="noopener noreferrer" title="Quiero algo similar"><i class="bi bi-whatsapp"></i></a>
                   </div>
                 </div>
-              </div>
-              <div class="portfolio-caption">
-                <h4>Desinfección y Recuperación de Sitio WordPress</h4>
-                <p>
-                  Análisis y eliminación de código malicioso que generaba
-                  contenido no autorizado en resultados de búsqueda.
-                  Hardening del sitio, actualización de plugins y recuperación
-                  total del posicionamiento SEO.
-                </p>
-                <div class="tech-tags">
-                  <span class="tech-tag">WordPress</span>
-                  <span class="tech-tag">PHP</span>
-                  <span class="tech-tag">MySQL</span>
-                  <span class="tech-tag">Google Search Console</span>
-                  <span class="tech-tag">Análisis Forense</span>
-                </div>
-              </div>
+              </article>
             </div>
 
-
-            <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="350">
-              <div class="portfolio-wrap">
-                <div class="portfolio-img-fallback mechanicsoft-bg">
-                  <span class="fallback-label">MechanicSoft</span>
-                </div>
-                <div class="portfolio-info">
-                  <div class="content">
-                    <span class="category">Sistema de Gestión</span>
-                    <h4 class="category">MechanicSoft</h4>
-                    <div class="portfolio-links">
-                      <a
-                        href="https://github.com/CamachoLives/MechanicSoftRest"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="Ver Repositorio en GitHub"
-                        ><i class="bi bi-github"></i
-                      ></a>
-                      <a
-                        href="https://wa.me/573148917721?text=Hola%20Cristian%2C%20quiero%20algo%20similar%20a%20MechanicSoft"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="Quiero algo similar"
-                        ><i class="bi bi-whatsapp"></i
-                      ></a>
-                    </div>
+            <!-- VotaCam -->
+            <div class="col-lg-6 app-item" data-cat="civic live" data-aos="fade-up" data-aos-delay="100">
+              <article class="app-card" style="--app-color: #f59e0b; --app-color-2: #ef4444">
+                <a class="app-browser" href="https://votacam.rfcamacris.workers.dev/" target="_blank" rel="noopener noreferrer" aria-label="Abrir VotaCam en vivo">
+                  <div class="app-browser-bar">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    <span class="app-url"><i class="bi bi-lock-fill"></i> votacam.rfcamacris.workers.dev</span>
+                  </div>
+                  <div class="app-shot">
+                    <div class="app-shot-fallback"><i class="bi bi-check2-square"></i><span>VotaCam</span></div>
+                    <img src="https://capturas.rfcamacris.workers.dev/votacam.webp" alt="Vista de VotaCam, votación para asambleas" loading="lazy" decoding="async" onerror="this.remove()" />
+                    <span class="app-open"><i class="bi bi-play-circle-fill"></i> Probar en vivo</span>
+                  </div>
+                </a>
+                <div class="app-body">
+                  <div class="app-meta">
+                    <span class="app-live"><span class="pulse"></span> En línea</span>
+                    <span class="app-cat">Propiedad horizontal</span>
+                  </div>
+                  <h3>VotaCam</h3>
+                  <p>
+                    Votación digital para asambleas de copropietarios. Cada
+                    persona vota desde su celular, sin instalar nada, y el
+                    resultado sale en pantalla en menos de 60 segundos.
+                  </p>
+                  <ul class="app-features">
+                    <li><i class="bi bi-check2-circle"></i> Quórum por coeficiente y mayorías de la Ley 675</li>
+                    <li><i class="bi bi-check2-circle"></i> Panel del operador en vivo con 500+ votantes</li>
+                    <li><i class="bi bi-check2-circle"></i> Ingreso con QR, letra grande y lectura en voz alta</li>
+                  </ul>
+                  <div class="tech-tags">
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Cloudflare Workers</span>
+                    <span class="tech-tag">Workers KV</span>
+                    <span class="tech-tag">Accesibilidad</span>
+                  </div>
+                  <div class="app-actions">
+                    <a class="app-btn primary" href="https://votacam.rfcamacris.workers.dev/votante" target="_blank" rel="noopener noreferrer"><i class="bi bi-phone"></i> Votante</a>
+                    <a class="app-btn" href="https://votacam.rfcamacris.workers.dev/operador" target="_blank" rel="noopener noreferrer"><i class="bi bi-display"></i> Operador</a>
+                    <a class="app-btn ghost" href="https://wa.me/573148917721?text=Hola%20Cristian%2C%20me%20interesa%20VotaCam%20para%20nuestra%20asamblea" target="_blank" rel="noopener noreferrer" title="Me interesa"><i class="bi bi-whatsapp"></i></a>
                   </div>
                 </div>
-              </div>
-              <div class="portfolio-caption">
-                <h4>MechanicSoft – Sistema de Gestión para Talleres</h4>
-                <p>
-                  Plataforma para digitalizar la operación de talleres de motos:
-                  registro de vehículos, órdenes de servicio, seguimiento de
-                  reparaciones y automatización de procesos. API REST con
-                  package-by-feature, validaciones y Docker Compose.
-                </p>
-                <div class="tech-tags">
-                  <span class="tech-tag">Java 17</span>
-                  <span class="tech-tag">Spring Boot 3</span>
-                  <span class="tech-tag">PostgreSQL</span>
-                  <span class="tech-tag">Docker Compose</span>
-                  <span class="tech-tag">React + Vite</span>
-                </div>
-              </div>
+              </article>
             </div>
 
-            <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="450">
-              <div class="portfolio-wrap">
-                <div class="portfolio-img-fallback movig-bg">
-                  <span class="fallback-label">Movig</span>
-                </div>
-                <div class="portfolio-info">
-                  <div class="content">
-                    <span class="category">Sitio Web Corporativo</span>
-                    <h4 class="category">Movig.com.co</h4>
-                    <div class="portfolio-links">
-                      <a
-                        href="https://movig.com.co"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="Ver sitio en vivo"
-                        ><i class="bi bi-box-arrow-up-right"></i
-                      ></a>
-                      <a
-                        href="https://wa.me/573148917721?text=Hola%20Cristian%2C%20quiero%20un%20sitio%20web%20similar%20a%20Movig"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        title="Quiero algo similar"
-                        ><i class="bi bi-whatsapp"></i
-                      ></a>
-                    </div>
+            <!-- MOVIG -->
+            <div class="col-lg-6 app-item" data-cat="web live" data-aos="fade-up" data-aos-delay="200">
+              <article class="app-card" style="--app-color: #a78bfa; --app-color-2: #06b6d4">
+                <a class="app-browser" href="https://movig.com.co/" target="_blank" rel="noopener noreferrer" aria-label="Abrir movig.com.co">
+                  <div class="app-browser-bar">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    <span class="app-url"><i class="bi bi-lock-fill"></i> movig.com.co</span>
+                  </div>
+                  <div class="app-shot">
+                    <div class="app-shot-fallback"><i class="bi bi-camera-video"></i><span>MOVIG</span></div>
+                    <img src="https://capturas.rfcamacris.workers.dev/movig.webp" alt="Vista del sitio web de MOVIG" loading="lazy" decoding="async" onerror="this.remove()" />
+                    <span class="app-open"><i class="bi bi-play-circle-fill"></i> Visitar sitio</span>
+                  </div>
+                </a>
+                <div class="app-body">
+                  <div class="app-meta">
+                    <span class="app-live"><span class="pulse"></span> En línea</span>
+                    <span class="app-cat">Sitio corporativo · Cliente real</span>
+                  </div>
+                  <h3>MOVIG</h3>
+                  <p>
+                    Sitio web de una empresa de videovigilancia en Bogotá
+                    (cámaras, monitoreo y control de acceso), con dominio
+                    propio. Migrado de 15 páginas HTML sueltas a una SPA en
+                    Angular sin cambiar el diseño.
+                  </p>
+                  <ul class="app-features">
+                    <li><i class="bi bi-check2-circle"></i> Páginas con carga diferida y rutas limpias</li>
+                    <li><i class="bi bi-check2-circle"></i> Redirecciones 301 para conservar el SEO</li>
+                    <li><i class="bi bi-check2-circle"></i> Integración con WhatsApp y redes sociales</li>
+                  </ul>
+                  <div class="tech-tags">
+                    <span class="tech-tag">Angular 20</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Bootstrap</span>
+                    <span class="tech-tag">Cloudflare Pages</span>
+                  </div>
+                  <div class="app-actions">
+                    <a class="app-btn primary" href="https://movig.com.co/" target="_blank" rel="noopener noreferrer"><i class="bi bi-box-arrow-up-right"></i> Visitar</a>
+                    <a class="app-btn ghost" href="https://wa.me/573148917721?text=Hola%20Cristian%2C%20quiero%20un%20sitio%20web%20similar%20a%20Movig" target="_blank" rel="noopener noreferrer" title="Quiero algo similar"><i class="bi bi-whatsapp"></i></a>
                   </div>
                 </div>
-              </div>
-              <div class="portfolio-caption">
-                <h4>Movig – Sitio Web de Videovigilancia</h4>
-                <p>
-                  Diseño, desarrollo y puesta en producción del sitio web de
-                  una empresa de videovigilancia (cámaras, monitoreo 24/7 y
-                  nube). Sitio responsivo con integración de WhatsApp, redes
-                  sociales y video. Infraestructura completa en Cloudflare.
-                </p>
-                <div class="tech-tags">
-                  <span class="tech-tag">HTML5</span>
-                  <span class="tech-tag">CSS3</span>
-                  <span class="tech-tag">JavaScript</span>
-                  <span class="tech-tag">Cloudflare CDN</span>
+              </article>
+            </div>
+
+            <!-- Calendario Restrictivo / Camintra -->
+            <div class="col-lg-6 app-item" data-cat="gestion" data-aos="fade-up" data-aos-delay="100">
+              <article class="app-card" style="--app-color: #f472b6; --app-color-2: #8b5cf6">
+                <a class="app-browser glightbox" href="assets/img/portfolio/Camintra.jpg" aria-label="Ver captura de Camintra">
+                  <div class="app-browser-bar">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    <span class="app-url"><i class="bi bi-building-lock"></i> intranet corporativa</span>
+                  </div>
+                  <div class="app-shot">
+                    <div class="app-shot-fallback"><i class="bi bi-calendar-week"></i><span>Camintra</span></div>
+                    <img src="assets/img/portfolio/Camintra.jpg" alt="Calendario Restrictivo, intranet corporativa" loading="lazy" decoding="async" onerror="this.remove()" />
+                    <span class="app-open"><i class="bi bi-zoom-in"></i> Ver captura</span>
+                  </div>
+                </a>
+                <div class="app-body">
+                  <div class="app-meta">
+                    <span class="app-badge"><i class="bi bi-shield-lock"></i> Uso interno</span>
+                    <span class="app-cat">Intranet corporativa</span>
+                  </div>
+                  <h3>Calendario Restrictivo</h3>
+                  <p>
+                    Plataforma interna para gestionar reuniones, actividades
+                    semanales, recordatorios y clientes, con acceso controlado
+                    por roles.
+                  </p>
+                  <ul class="app-features">
+                    <li><i class="bi bi-check2-circle"></i> Comunicación en tiempo real con WebSockets</li>
+                    <li><i class="bi bi-check2-circle"></i> Permisos por rol para cada módulo</li>
+                    <li><i class="bi bi-check2-circle"></i> Arquitectura de microservicios con API REST</li>
+                  </ul>
+                  <div class="tech-tags">
+                    <span class="tech-tag">Angular</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">WebSockets</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Microservicios</span>
+                  </div>
+                  <div class="app-actions">
+                    <a class="app-btn primary glightbox" href="assets/img/portfolio/Camintra.jpg"><i class="bi bi-image"></i> Ver captura</a>
+                    <a class="app-btn ghost" href="https://wa.me/573148917721?text=Hola%20Cristian%2C%20quiero%20una%20intranet%20como%20el%20Calendario%20Restrictivo" target="_blank" rel="noopener noreferrer" title="Quiero algo similar"><i class="bi bi-whatsapp"></i></a>
+                  </div>
                 </div>
-              </div>
+              </article>
+            </div>
+
+            <!-- Recuperación WordPress -->
+            <div class="col-lg-6 app-item" data-cat="seguridad" data-aos="fade-up" data-aos-delay="200">
+              <article class="app-card" style="--app-color: #f87171; --app-color-2: #fb923c">
+                <a class="app-browser glightbox" href="assets/img/portfolio/wd.webp" aria-label="Ver captura del caso WordPress">
+                  <div class="app-browser-bar">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                    <span class="app-url"><i class="bi bi-bug"></i> sitio del cliente</span>
+                  </div>
+                  <div class="app-shot">
+                    <div class="app-shot-fallback"><i class="bi bi-shield-check"></i><span>WordPress</span></div>
+                    <img src="assets/img/portfolio/wd.webp" alt="Desinfección y recuperación de sitio WordPress" loading="lazy" decoding="async" onerror="this.remove()" />
+                    <span class="app-open"><i class="bi bi-zoom-in"></i> Ver captura</span>
+                  </div>
+                </a>
+                <div class="app-body">
+                  <div class="app-meta">
+                    <span class="app-badge"><i class="bi bi-briefcase"></i> Caso real</span>
+                    <span class="app-cat">Ciberseguridad web</span>
+                  </div>
+                  <h3>Recuperación de Sitio WordPress</h3>
+                  <p>
+                    Análisis y eliminación de código malicioso que publicaba
+                    contenido no autorizado en Google. Se blindó el sitio y se
+                    recuperó todo el posicionamiento SEO.
+                  </p>
+                  <ul class="app-features">
+                    <li><i class="bi bi-check2-circle"></i> Análisis forense y limpieza del código infectado</li>
+                    <li><i class="bi bi-check2-circle"></i> Hardening y actualización de plugins</li>
+                    <li><i class="bi bi-check2-circle"></i> Recuperación del SEO en Search Console</li>
+                  </ul>
+                  <div class="tech-tags">
+                    <span class="tech-tag">WordPress</span>
+                    <span class="tech-tag">PHP</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">Search Console</span>
+                    <span class="tech-tag">Análisis forense</span>
+                  </div>
+                  <div class="app-actions">
+                    <a class="app-btn primary glightbox" href="assets/img/portfolio/wd.webp"><i class="bi bi-image"></i> Ver captura</a>
+                    <a class="app-btn ghost" href="https://wa.me/573148917721?text=Hola%20Cristian%2C%20necesito%20ayuda%20con%20la%20seguridad%20de%20mi%20sitio%20web" target="_blank" rel="noopener noreferrer" title="Necesito ayuda"><i class="bi bi-whatsapp"></i></a>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
         </div>
       </section>
-      <!-- /Portfolio Section -->
+      <!-- /Proyectos -->
 
       <!-- GitHub Repos Section -->
       <section id="github-projects" class="github-section section light-background">
@@ -2685,6 +2865,20 @@
           if (loading) loading.innerHTML = '<p class="text-muted">No se pudieron cargar los repositorios en este momento.</p>';
         });
     })();
+    </script>
+      <script>
+      // Filtros del catálogo de apps
+      document.querySelectorAll(".apps-filter").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          document.querySelectorAll(".apps-filter").forEach(function (b) { b.classList.remove("active"); });
+          btn.classList.add("active");
+          var f = btn.getAttribute("data-filter");
+          document.querySelectorAll(".app-item").forEach(function (item) {
+            item.classList.toggle("is-hidden", f !== "*" && item.getAttribute("data-cat").split(" ").indexOf(f) === -1);
+          });
+          if (window.AOS) AOS.refresh();
+        });
+      });
     </script>
   </body>
 </html>
