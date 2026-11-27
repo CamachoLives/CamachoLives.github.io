@@ -895,6 +895,9 @@
       .app-btn.primary:hover { color: #0b0f17; filter: brightness(1.1); transform: translateY(-1px); }
       .app-btn.ghost { padding: 9px 13px; color: #25d366; }
       @media (prefers-reduced-motion: reduce) { .app-card, .app-shot img, .app-live .pulse { transition: none; animation: none; } }
+      .app-browser:focus-visible, .app-btn:focus-visible, .apps-filter:focus-visible {
+        outline: 2px solid var(--app-color, var(--accent-color)); outline-offset: 3px;
+      }
     </style>
   </head>
 
