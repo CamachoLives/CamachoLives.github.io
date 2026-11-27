@@ -34,6 +34,7 @@ Perfil DevSecOps que diseña, construye, despliega y protege software de extremo
 | Swiper | Carrusel |
 | Bootstrap Icons | Iconografía |
 | GitHub REST API | Repositorios dinámicos |
+| Cloudflare Workers + KV | Capturas de las apps del catálogo |
 
 ---
 
@@ -44,7 +45,7 @@ Perfil DevSecOps que diseña, construye, despliega y protege software de extremo
 - **Respaldo Técnico** — PCI-DSS, Sector Financiero, Inglés B1-B2, 4+ años
 - **IA & Soluciones Tecnológicas** — Automatización IA, Chatbots, Integración LLM
 - **Servicios** — 8 servicios con CTA WhatsApp específico por servicio
-- **Proyectos** — 4 proyectos: Calendario Restrictivo, WordPress Recovery, MechanicSoft, Movig
+- **Proyectos** — Catálogo unificado con filtros: BalonCam, MechanicSoft, VotaCam y MOVIG (en línea en Cloudflare), Calendario Restrictivo y Recuperación de WordPress
 - **Repositorios GitHub** — Carga dinámica via GitHub API
 - **Experiencia** — Timeline profesional (Incocrédito, Mnemo, Siscomputo)
 - **Impacto Real** — 5 métricas con contadores animados
@@ -67,6 +68,8 @@ Perfil DevSecOps que diseña, construye, despliega y protege software de extremo
 - Open Graph y Twitter Card tags
 - `rel="noopener noreferrer"` en todos los enlaces externos
 - `loading="lazy"` en imágenes
+- Catálogo de proyectos con tarjetas tipo navegador, indicador "En línea" y filtros por categoría
+- Capturas de las apps servidas desde `capturas.rfcamacris.workers.dev` (Cloudflare Worker + KV)
 
 ---
 
